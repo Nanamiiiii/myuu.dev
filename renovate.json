@@ -1,17 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "schedule:automergeDaily",
   ],
   "dependencyDashboard": true,
   "ignoreTests": true,
   "rangeStrategy": "bump",
   "schedule": [
-    "every 1 hour after 00:00 and before 23:59"
-  ],
-  "automergeSchedule": [
-    "after 10pm and before 5am every weekday",
-    "every weekend"
+    "* */3 * * *"
   ],
   "enabledManagers": [
     "npm"
