@@ -92,7 +92,12 @@ export const Navbar = (props: any) => {
                 <MenuItem as={NextLink} href="/works" passHref>
                   Works
                 </MenuItem>
-                <MenuItem as="a" href="https://notes.myuu.dev/index" target="_blank" rel="noreferrer noopener">
+                <MenuItem
+                  as="a"
+                  href="https://notes.myuu.dev/index"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   Blogs
                 </MenuItem>
               </MenuList>

@@ -11,10 +11,8 @@ import { FaJava } from 'react-icons/fa'
 import {
   SiVisualstudiocode,
   SiNeovim,
-  SiWindows,
   SiArchlinux,
   SiRuby,
-  SiRubyonrails,
   SiRust,
   SiC,
   SiCplusplus,
@@ -34,11 +32,8 @@ import {
   SiMicrosoftazure,
   SiVmware,
   SiGooglecloud,
-  SiRedhat,
-  SiUbuntu,
-  SiKalilinux,
-  SiFedora,
   SiLua,
+  SiNixos,
 } from 'react-icons/si'
 import { ItemizeName, ItemizeSection } from '../../components/itemize'
 
@@ -141,10 +136,6 @@ export const Component = () => {
           <TagLeftIcon as={SiDotnet} />
           .NET
         </Tag>
-        <Tag colorScheme="red" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiRubyonrails} />
-          Rails
-        </Tag>
       </Box>
 
       <Heading
@@ -210,28 +201,12 @@ export const Component = () => {
       </Heading>
       <Box display="flex" py={2} pl={4} overflow="auto">
         <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiArchlinux} />
-          ArchLinux
-        </Tag>
-        <Tag colorScheme="red" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiRedhat} />
-          RHEL
-        </Tag>
-        <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiFedora} />
-          Fedora
-        </Tag>
-        <Tag colorScheme="orange" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiUbuntu} />
-          Ubuntu
-        </Tag>
-        <Tag colorScheme="navy" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiKalilinux} />
-          Kali Linux
+          <TagLeftIcon as={SiNixos} />
+          NixOS
         </Tag>
         <Tag colorScheme="cyan" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiWindows} />
-          Windows
+          <TagLeftIcon as={SiArchlinux} />
+          ArchLinux
         </Tag>
       </Box>
 

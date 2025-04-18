@@ -28,9 +28,9 @@ const nextConfig = {
         source: '/blogs/:slug',
         destination: 'https://notes.myuu.dev/:slug',
         permanent: true,
-      }
+      },
     ]
-  }
+  },
 }
 
 export default nextConfig
