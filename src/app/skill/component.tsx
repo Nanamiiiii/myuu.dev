@@ -9,7 +9,6 @@ import {
 } from '@chakra-ui/react'
 import { FaJava } from 'react-icons/fa'
 import {
-  SiVisualstudiocode,
   SiNeovim,
   SiArchlinux,
   SiRuby,
@@ -17,7 +16,6 @@ import {
   SiC,
   SiCplusplus,
   SiGo,
-  SiCsharp,
   SiPython,
   SiTypescript,
   SiVim,
@@ -29,12 +27,13 @@ import {
   SiDocker,
   SiQemu,
   SiAmazonwebservices,
-  SiMicrosoftazure,
   SiVmware,
   SiGooglecloud,
   SiLua,
   SiNixos,
 } from 'react-icons/si'
+import { TbBrandCSharp } from 'react-icons/tb'
+import { VscVscode, VscAzure } from 'react-icons/vsc'
 import { ItemizeName, ItemizeSection } from '../../components/itemize'
 
 export const Component = () => {
@@ -85,7 +84,7 @@ export const Component = () => {
           Ruby
         </Tag>
         <Tag colorScheme="teal" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiCsharp} />
+          <TagLeftIcon as={TbBrandCSharp} />
           C#
         </Tag>
         <Tag colorScheme="orange" mx={2} flexShrink="0">
@@ -185,7 +184,7 @@ export const Component = () => {
           GCP
         </Tag>
         <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiMicrosoftazure} />
+          <TagLeftIcon as={VscAzure} />
           Azure
         </Tag>
       </Box>
@@ -229,7 +228,7 @@ export const Component = () => {
           Vim
         </Tag>
         <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiVisualstudiocode} />
+          <TagLeftIcon as={VscVscode} />
           VSCode
         </Tag>
       </Box>

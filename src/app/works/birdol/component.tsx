@@ -11,19 +11,19 @@ import {
   Center,
   Divider,
 } from '@chakra-ui/react'
+import { FaMicrosoft } from 'react-icons/fa'
 import { IoLogoAndroid, IoLogoWindows } from 'react-icons/io5'
 import {
   SiGoogleplay,
-  SiMicrosoft,
   SiApple,
   SiIos,
   SiGo,
-  SiCsharp,
   SiCplusplus,
   SiKubernetes,
   SiDocker,
   SiUnity,
 } from 'react-icons/si'
+import { TbBrandCSharp } from 'react-icons/tb'
 import P from '../../../components/paragraph'
 import { Title, WorkImagePad, Meta } from '../../../components/work'
 
@@ -72,7 +72,7 @@ export const Component = () => {
           target="_blank"
           fontWeight="300"
         >
-          <SiMicrosoft />
+          <FaMicrosoft />
           &nbsp; Microsoft Store
         </Button>
         <Button
@@ -114,7 +114,7 @@ export const Component = () => {
           target="_blank"
           fontWeight="300"
         >
-          <SiMicrosoft />
+          <FaMicrosoft />
         </Button>
         <Button
           colorScheme="gray"
@@ -142,7 +142,7 @@ export const Component = () => {
         <ListItem>
           <Meta>Language</Meta>
           <ListIcon as={SiGo} />
-          <ListIcon as={SiCsharp} />
+          <ListIcon as={TbBrandCSharp} />
           <ListIcon as={SiCplusplus} />
         </ListItem>
         <ListItem>
