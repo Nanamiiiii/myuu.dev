@@ -42,7 +42,7 @@
     "server-only": "^0.0.1",
     "sharp": "0.34.1",
     "tls": "^0.0.1",
-    "ts-pattern": "^5.7.0",
+    "ts-pattern": "^5.7.1",
     "unified": "^11.0.5"
   },
   "devDependencies": {
