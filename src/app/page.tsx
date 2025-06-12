@@ -39,8 +39,8 @@ import { ItemizeName, ItemizeSection } from '../components/itemize'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { getPublications } from '../lib/newt'
-import { Publication } from '../types/blog'
+import { Publication } from './pubinfo'
+import { reviewedPub, noreviewPub, journalPub, thesisPub } from './pubinfo'
 
 import 'highlight.js/styles/tokyo-night-dark.css'
 
@@ -116,29 +116,28 @@ const PubSection = ({
         <AccordionPanel>
           <VStack>
             {items.map((pub, idx) => {
-              const date = new Date(pub.publishedOn).toDateString().split(' ')
               return (
                 <AchievementsCard
                   title={pub.title}
-                  booktitle={`${pub.publishedTo}, ${date[1]} ${date[3]}`}
+                  booktitle={`${pub.publishedTo}, ${pub.publishedOn}`}
                   key={`${name}-${idx}`}
                 >
                   {pub.author.map((author, idx) => {
-                    if (author.data.myname) {
+                    if (author.myname) {
                       if (idx == 0) {
-                        return <u key={idx}>{author.data.name}</u>
+                        return <u key={idx}>{author.name}</u>
                       } else {
                         return (
                           <span key={idx}>
-                            , <u>{author.data.name}</u>
+                            , <u>{author.name}</u>
                           </span>
                         )
                       }
                     } else {
                       if (idx == 0) {
-                        return <span key={idx}>{author.data.name}</span>
+                        return <span key={idx}>{author.name}</span>
                       } else {
-                        return <span key={idx}>, {author.data.name}</span>
+                        return <span key={idx}>, {author.name}</span>
                       }
                     }
                   })}
@@ -156,9 +155,9 @@ const PubSection = ({
         Publications
       </Heading>
       <Accordion allowMultiple>
+        <PubItem items={journal} name="Journal" />
         <PubItem items={reviewed} name="Peer Reviewed" />
         <PubItem items={noreview} name="No Review" />
-        <PubItem items={journal} name="Journal" />
         <PubItem items={thesis} name="Thesis" />
       </Accordion>
     </>
@@ -166,16 +165,6 @@ const PubSection = ({
 }
 
 const Home: NextPage = async () => {
-  const publications = await getPublications()
-  const reviewedPub = publications.filter(
-    pub => pub.publishedType === 'reviewed',
-  )
-  const noreviewPub = publications.filter(
-    pub => pub.publishedType === 'no-review',
-  )
-  const journalPub = publications.filter(pub => pub.publishedType === 'journal')
-  const thesisPub = publications.filter(pub => pub.publishedType === 'thesis')
-
   return (
     <>
       <Layout>
