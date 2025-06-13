@@ -1,5 +1,4 @@
 'use client'
-import { HamburgerIcon } from '@chakra-ui/icons'
 import {
   Container,
   Box,
@@ -8,26 +7,25 @@ import {
   Heading,
   Flex,
   Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
   IconButton,
-  useColorModeValue,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import { RxHamburgerMenu } from 'react-icons/rx'
 import Logo from './logo'
 
 const LinkItem = ({ href, children }: { href: string; children: any }) => {
   return (
-    <Link as={NextLink} href={href} p={2} color="#202023" passHref>
-      {children}
+    <Link p={2} color="#202023" asChild>
+      <NextLink href={href} passHref>
+        {children}
+      </NextLink>
     </Link>
   )
 }
 
 const LinkItemExt = ({ href, children }: { href: string; children: any }) => {
   return (
-    <Link href={href} p={2} color="#202023" isExternal>
+    <Link href={href} p={2} color="#202023" target="_blank">
       {children}
     </Link>
   )
@@ -39,7 +37,7 @@ export const Navbar = (props: any) => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#f0f8fc40', '#20202380')}
+      bg="#f0f8fc40"
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
       {...props}
@@ -47,7 +45,7 @@ export const Navbar = (props: any) => {
       <Container
         display="flex"
         p={2}
-        maxW="container.lg"
+        maxW="5xl"
         flex-wrap="wrap"
         alignItems="center"
         justifyContent="space-between"
@@ -64,7 +62,7 @@ export const Navbar = (props: any) => {
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, nmd: 0 }}
+          mt={{ base: 4, md: 0 }}
           fontWeight="300"
         >
           <LinkItem href="/">Home</LinkItem>
@@ -75,33 +73,41 @@ export const Navbar = (props: any) => {
 
         <Box display="flex" flex={1} alignItems="center" justifyContent="right">
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <MenuItem as={NextLink} href="/" passHref>
-                  Home
-                </MenuItem>
-                <MenuItem as={NextLink} href="/skill" passHref>
-                  Skill
-                </MenuItem>
-                <MenuItem as={NextLink} href="/works" passHref>
-                  Works
-                </MenuItem>
-                <MenuItem
-                  as="a"
-                  href="https://notes.myuu.dev/index"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Blogs
-                </MenuItem>
-              </MenuList>
-            </Menu>
+            <Menu.Root>
+              <Menu.Trigger asChild>
+                <IconButton variant="outline" aria-label="Options">
+                  <RxHamburgerMenu />
+                </IconButton>
+              </Menu.Trigger>
+              <Menu.Positioner>
+                <Menu.Content>
+                  <Menu.Item value="home" asChild>
+                    <NextLink href="/" passHref>
+                      Home
+                    </NextLink>
+                  </Menu.Item>
+                  <Menu.Item value="skill" asChild>
+                    <NextLink href="/skill" passHref>
+                      Skill
+                    </NextLink>
+                  </Menu.Item>
+                  <Menu.Item value="works" asChild>
+                    <NextLink href="/works" passHref>
+                      Works
+                    </NextLink>
+                  </Menu.Item>
+                  <Menu.Item value="blogs" asChild>
+                    <a
+                      href="https://notes.myuu.dev/index"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Blogs
+                    </a>
+                  </Menu.Item>
+                </Menu.Content>
+              </Menu.Positioner>
+            </Menu.Root>
           </Box>
         </Box>
       </Container>

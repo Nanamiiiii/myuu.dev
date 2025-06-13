@@ -1,6 +1,7 @@
 'use client'
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
-import { Global, css } from '@emotion/react'
+import { css } from '@emotion/css'
+import { Global } from '@emotion/react'
 import Image, { StaticImageData } from 'next/image'
 import NextLink from 'next/link'
 
@@ -21,7 +22,7 @@ export const ContentsGrid = ({
       w="100%"
       alignItems="center"
       borderRadius="5px"
-      css={ContentStyle}
+      className={ImageOverlay}
     >
       <LinkBox cursor="pointer" p={2}>
         <Box
@@ -58,9 +59,8 @@ export const ContentsGrid = ({
   )
 }
 
-const ContentStyle = css`
+const ImageOverlay = css`
   cursor: pointer;
-
   &:hover .image-overlay {
     opacity: 1;
     transform: scale(1.02, 1.02);
@@ -84,7 +84,7 @@ export const WorkContents = ({
     w="100%"
     alignItems="center"
     borderRadius="5px"
-    css={ContentStyle}
+    className={ImageOverlay}
   >
     <LinkBox cursor="pointer" px={2} py={2}>
       <Box
@@ -107,10 +107,12 @@ export const WorkContents = ({
         className="grid-contents"
         placeholder="blur"
       />
-      <LinkOverlay as={NextLink} href={`/works/${id}`} passHref>
-        <Text mt={2} fontSize={18} textAlign="center" zIndex={1}>
-          {title}
-        </Text>
+      <LinkOverlay asChild>
+        <NextLink href={`/works/${id}`} passHref>
+          <Text mt={2} fontSize={18} textAlign="center" zIndex={1}>
+            {title}
+          </Text>
+        </NextLink>
       </LinkOverlay>
       <Text fontSize={16} textAlign="center">
         {children}

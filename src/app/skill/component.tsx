@@ -1,12 +1,5 @@
 'use client'
-import {
-  Box,
-  Container,
-  Divider,
-  Heading,
-  Tag,
-  TagLeftIcon,
-} from '@chakra-ui/react'
+import { Box, Container, Separator, Heading, Tag } from '@chakra-ui/react'
 import { FaJava } from 'react-icons/fa'
 import {
   SiNeovim,
@@ -34,6 +27,7 @@ import {
 } from 'react-icons/si'
 import { TbBrandCSharp } from 'react-icons/tb'
 import { VscVscode, VscAzure } from 'react-icons/vsc'
+import { CustomHeading } from '../../components/heading'
 import { ItemizeName, ItemizeSection } from '../../components/itemize'
 
 export const Component = () => {
@@ -43,7 +37,7 @@ export const Component = () => {
         Development Skills
       </Heading>
 
-      <Heading
+      <CustomHeading
         as="h4"
         fontSize={20}
         mb={4}
@@ -51,93 +45,124 @@ export const Component = () => {
         fontWeight="300"
       >
         Programming
-      </Heading>
+      </CustomHeading>
       <Heading as="h5" fontSize={18} mb={2} fontWeight="300">
         Awesome
       </Heading>
       <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag colorScheme="orange" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiRust} />
-          Rust
-        </Tag>
-        <Tag colorScheme="cyan" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiGo} />
-          Go
-        </Tag>
-        <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiC} />C
-        </Tag>
-        <Tag colorScheme="purple" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiCplusplus} />
-          C++
-        </Tag>
-        <Tag colorScheme="orange" mx={2} flexShrink="0">
-          RISC-V Assembly
-        </Tag>
+        <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiRust />
+          </Tag.StartElement>
+          <Tag.Label>Rust</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiGo />
+          </Tag.StartElement>
+          <Tag.Label>Go</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiC />
+          </Tag.StartElement>
+          <Tag.Label>C</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiCplusplus />
+          </Tag.StartElement>
+          <Tag.Label>C++</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
+          <Tag.Label>RISC-V Assembly</Tag.Label>
+        </Tag.Root>
       </Box>
       <Heading as="h5" fontSize={18} mt={4} mb={2} fontWeight="300">
         Be used to
       </Heading>
       <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag colorScheme="red" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiRuby} />
-          Ruby
-        </Tag>
-        <Tag colorScheme="teal" mx={2} flexShrink="0">
-          <TagLeftIcon as={TbBrandCSharp} />
-          C#
-        </Tag>
-        <Tag colorScheme="orange" mx={2} flexShrink="0">
-          <TagLeftIcon as={FaJava} />
-          Java
-        </Tag>
-        <Tag colorScheme="brown" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiPython} />
-          Python
-        </Tag>
+        <Tag.Root colorPalette="red" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiRuby />
+          </Tag.StartElement>
+          <Tag.Label>Ruby</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="teal" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <TbBrandCSharp />
+          </Tag.StartElement>
+          <Tag.Label>C#</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <FaJava />
+          </Tag.StartElement>
+          <Tag.Label>Java</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="brown" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiPython />
+          </Tag.StartElement>
+          <Tag.Label>Python</Tag.Label>
+        </Tag.Root>
       </Box>
 
       <Heading as="h5" fontSize={18} mt={4} mb={2} fontWeight="300">
         Simply can write
       </Heading>
       <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag colorScheme="navy" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiTypescript} />
-          Typescript
-        </Tag>
-        <Tag colorScheme="yellow" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiJavascript} />
-          Javascript
-        </Tag>
-        <Tag colorScheme="green" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiVim} />
-          Vim script
-        </Tag>
-        <Tag colorScheme="purple" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiLua} />
-          Lua
-        </Tag>
-        <Tag colorScheme="cyan" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiHaskell} />
-          Haskell
-        </Tag>
-        <Tag colorScheme="gray" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiOcaml} />
-          Ocaml
-        </Tag>
+        <Tag.Root colorPalette="navy" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiTypescript />
+          </Tag.StartElement>
+          <Tag.Label>Typescript</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="yellow" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiJavascript />
+          </Tag.StartElement>
+          <Tag.Label>Javascript</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiVim />
+          </Tag.StartElement>
+          <Tag.Label>Vim script</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiLua />
+          </Tag.StartElement>
+          <Tag.Label>Lua</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiHaskell />
+          </Tag.StartElement>
+          <Tag.Label>Haskell</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="gray" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiOcaml />
+          </Tag.StartElement>
+          <Tag.Label>OCaml</Tag.Label>
+        </Tag.Root>
       </Box>
 
       <Heading as="h5" fontSize={18} mt={4} mb={2} fontWeight="300">
         Framework
       </Heading>
       <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag colorScheme="purple" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiDotnet} />
-          .NET
-        </Tag>
+        <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiDotnet />
+          </Tag.StartElement>
+          <Tag.Label>.NET</Tag.Label>
+        </Tag.Root>
       </Box>
 
-      <Heading
+      <CustomHeading
         as="h4"
         fontSize={20}
         mb={4}
@@ -145,27 +170,35 @@ export const Component = () => {
         fontWeight="300"
       >
         Virtualization
-      </Heading>
+      </CustomHeading>
       <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiKubernetes} />
-          Kubernetes
-        </Tag>
-        <Tag colorScheme="cyan" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiDocker} />
-          Docker
-        </Tag>
-        <Tag colorScheme="green" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiVmware} />
-          VMware
-        </Tag>
-        <Tag colorScheme="orange" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiQemu} />
-          QEMU KVM
-        </Tag>
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiKubernetes />
+          </Tag.StartElement>
+          <Tag.Label>Kubernetes</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiDocker />
+          </Tag.StartElement>
+          <Tag.Label>Docker</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiVmware />
+          </Tag.StartElement>
+          <Tag.Label>VMware</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiQemu />
+          </Tag.StartElement>
+          <Tag.Label>QEMU KVM</Tag.Label>
+        </Tag.Root>
       </Box>
 
-      <Heading
+      <CustomHeading
         as="h4"
         fontSize={20}
         mb={6}
@@ -173,23 +206,29 @@ export const Component = () => {
         fontWeight="300"
       >
         Cloud
-      </Heading>
+      </CustomHeading>
       <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag colorScheme="orange" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiAmazonwebservices} />
-          AWS
-        </Tag>
-        <Tag colorScheme="cyan" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiGooglecloud} />
-          GCP
-        </Tag>
-        <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={VscAzure} />
-          Azure
-        </Tag>
+        <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiAmazonwebservices />
+          </Tag.StartElement>
+          <Tag.Label>AWS</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiGooglecloud />
+          </Tag.StartElement>
+          <Tag.Label>GCP</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <VscAzure />
+          </Tag.StartElement>
+          <Tag.Label>Azure</Tag.Label>
+        </Tag.Root>
       </Box>
 
-      <Heading
+      <CustomHeading
         as="h4"
         fontSize={20}
         mb={6}
@@ -197,19 +236,23 @@ export const Component = () => {
         fontWeight="300"
       >
         Operating System
-      </Heading>
+      </CustomHeading>
       <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiNixos} />
-          NixOS
-        </Tag>
-        <Tag colorScheme="cyan" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiArchlinux} />
-          ArchLinux
-        </Tag>
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiNixos />
+          </Tag.StartElement>
+          <Tag.Label>NixOS</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiArchlinux />
+          </Tag.StartElement>
+          <Tag.Label>ArchLinux</Tag.Label>
+        </Tag.Root>
       </Box>
 
-      <Heading
+      <CustomHeading
         as="h4"
         fontSize={20}
         mb={6}
@@ -217,23 +260,29 @@ export const Component = () => {
         fontWeight="300"
       >
         Editor
-      </Heading>
+      </CustomHeading>
       <Box display="flex" py={2} pl={4} mb={6} overflow="auto">
-        <Tag colorScheme="green" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiNeovim} />
-          Neovim
-        </Tag>
-        <Tag colorScheme="green" mx={2} flexShrink="0">
-          <TagLeftIcon as={SiVim} />
-          Vim
-        </Tag>
-        <Tag colorScheme="blue" mx={2} flexShrink="0">
-          <TagLeftIcon as={VscVscode} />
-          VSCode
-        </Tag>
+        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiNeovim />
+          </Tag.StartElement>
+          <Tag.Label>Neovim</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiVim />
+          </Tag.StartElement>
+          <Tag.Label>Vim</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <VscVscode />
+          </Tag.StartElement>
+          <Tag.Label>VSCode</Tag.Label>
+        </Tag.Root>
       </Box>
 
-      <Divider />
+      <Separator />
 
       <Heading as="h3" fontSize={25} mt={6} mb={2} fontWeight="300">
         Qualifications

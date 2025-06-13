@@ -16,7 +16,7 @@ export const Pagenation = ({ totalCounts, nowPage = 1 }: Props) => {
   const pageCount = Math.ceil(totalCounts / PAGE_SIZE)
   return (
     <>
-      <HStack spacing={3} justifyContent="center">
+      <HStack gap={3} justifyContent="center">
         {range(1, pageCount).map((number, idx) => (
           <Link key={idx} href={`/blogs/page/${number}`}>
             <Button

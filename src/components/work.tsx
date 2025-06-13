@@ -1,27 +1,30 @@
 'use client'
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import { Heading, Box, Link, Badge } from '@chakra-ui/react'
 import NextImage, { StaticImageData } from 'next/image'
 import NextLink from 'next/link'
+import { IoChevronForwardSharp } from 'react-icons/io5'
 
 export const Title = ({ children }: { children: any }) => (
-  <Box fontWeight="300">
-    <Link as={NextLink} href="/works" fontStyle="italic" passHref>
-      Works
+  <Box fontWeight="300" display="inline-flex">
+    <Link fontStyle="italic" asChild>
+      <NextLink href="/works" passHref>
+        Works
+      </NextLink>
     </Link>
-    <span>
+    <Box display="inline-flex" alignItems="center">
       &nbsp;
-      <ChevronRightIcon />
+      <IoChevronForwardSharp />
       &nbsp;
-    </span>
+    </Box>
     <Heading
       display="inline-block"
       as="h3"
       fontSize={20}
-      mb={4}
+      mt={0.5}
       fontWeight="300"
+      alignItems="center"
     >
-      {children}
+      <span>{children}</span>
     </Heading>
   </Box>
 )

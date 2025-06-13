@@ -7,22 +7,11 @@ import {
   Text,
   IconButton,
   Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
   VStack,
   Card,
-  CardHeader,
-  CardBody,
   Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  PopoverBody,
-  PopoverFooter,
-  UnorderedList,
-  ListItem,
+  List,
+  Portal,
 } from '@chakra-ui/react'
 import type { Metadata, NextPage, ResolvingMetadata } from 'next'
 import { IoMdMail } from 'react-icons/io'
@@ -35,6 +24,7 @@ import {
   SiLinkedin,
   SiBluesky,
 } from 'react-icons/si'
+import { CustomHeading } from '../components/heading'
 import { ItemizeName, ItemizeSection } from '../components/itemize'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
@@ -68,25 +58,25 @@ const AchievementsCard = ({
   children: any
 }) => {
   return (
-    <Card
+    <Card.Root
       variant="outline"
       size="sm"
       width="100%"
       backgroundColor="#00000000"
       fontFamily="Hack, monospace"
     >
-      <CardHeader pb="0">
+      <Card.Header pb="0">
         <Heading fontSize="18px" fontFamily="Hack, monospace">
           {title}
         </Heading>
         <Text fontSize="16px">{children}</Text>
-      </CardHeader>
-      <CardBody>
-        <Text color="gray" as="i" fontSize="16px">
+      </Card.Header>
+      <Card.Body>
+        <Text color="gray" fontStyle="italic" fontSize="16px">
           {booktitle}
         </Text>
-      </CardBody>
-    </Card>
+      </Card.Body>
+    </Card.Root>
   )
 }
 
@@ -104,62 +94,64 @@ const PubSection = ({
   const PubItem = ({ items, name }: { items: Publication[]; name: string }) => {
     if (items.length == 0) return <></>
     return (
-      <AccordionItem>
-        <Heading as="h4" fontSize="18px" fontWeight="300">
-          <AccordionButton>
+      <Accordion.Item value={name}>
+        <Accordion.ItemTrigger>
+          <Heading as="h4" fontSize="18px" fontWeight="300">
             <Box as="span" flex="1" textAlign="left">
               {name}
             </Box>
-            <AccordionIcon />
-          </AccordionButton>
-        </Heading>
-        <AccordionPanel>
-          <VStack>
-            {items.map((pub, idx) => {
-              return (
-                <AchievementsCard
-                  title={pub.title}
-                  booktitle={`${pub.publishedTo}, ${pub.publishedOn}`}
-                  key={`${name}-${idx}`}
-                >
-                  {pub.author.map((author, idx) => {
-                    if (author.myname) {
-                      if (idx == 0) {
-                        return <u key={idx}>{author.name}</u>
+          </Heading>
+          <Accordion.ItemIndicator />
+        </Accordion.ItemTrigger>
+        <Accordion.ItemContent>
+          <Accordion.ItemBody>
+            <VStack>
+              {items.map((pub, idx) => {
+                return (
+                  <AchievementsCard
+                    title={pub.title}
+                    booktitle={`${pub.publishedTo}, ${pub.publishedOn}`}
+                    key={`${name}-${idx}`}
+                  >
+                    {pub.author.map((author, idx) => {
+                      if (author.myname) {
+                        if (idx == 0) {
+                          return <u key={idx}>{author.name}</u>
+                        } else {
+                          return (
+                            <span key={idx}>
+                              , <u>{author.name}</u>
+                            </span>
+                          )
+                        }
                       } else {
-                        return (
-                          <span key={idx}>
-                            , <u>{author.name}</u>
-                          </span>
-                        )
+                        if (idx == 0) {
+                          return <span key={idx}>{author.name}</span>
+                        } else {
+                          return <span key={idx}>, {author.name}</span>
+                        }
                       }
-                    } else {
-                      if (idx == 0) {
-                        return <span key={idx}>{author.name}</span>
-                      } else {
-                        return <span key={idx}>, {author.name}</span>
-                      }
-                    }
-                  })}
-                </AchievementsCard>
-              )
-            })}
-          </VStack>
-        </AccordionPanel>
-      </AccordionItem>
+                    })}
+                  </AchievementsCard>
+                )
+              })}
+            </VStack>
+          </Accordion.ItemBody>
+        </Accordion.ItemContent>
+      </Accordion.Item>
     )
   }
   return (
     <>
-      <Heading as="h3" variant="section-title" fontSize={20} fontWeight="300">
+      <CustomHeading variant="section-title" fontSize={20} fontWeight="300">
         Publications
-      </Heading>
-      <Accordion allowMultiple>
+      </CustomHeading>
+      <Accordion.Root multiple>
         <PubItem items={journal} name="Journal" />
         <PubItem items={reviewed} name="Peer Reviewed" />
         <PubItem items={noreview} name="No Review" />
         <PubItem items={thesis} name="Thesis" />
-      </Accordion>
+      </Accordion.Root>
     </>
   )
 }
@@ -198,64 +190,69 @@ const Home: NextPage = async () => {
 
           <Box display={{ md: 'flex' }} mb={10}>
             <Box flexGrow={1}>
-              <Heading as="h2" variant="page-title" fontWeight="200">
+              <Heading as="h2" fontWeight="200" fontSize="4xl">
                 Akihiro Saiki
               </Heading>
-              <Text fontSize="18px">
+              <Text fontSize="18px" pt={3}>
                 Department of Computer Science and Engineering, Waseda
                 University
               </Text>
               <Text fontSize="18px">Research Associate / Ph.D Student</Text>
-              <Box mt={2}>
+              <Box mt={2} alignItems="center" display="flex">
                 <Link href="https://twitter.com/Nanamii_i" target="_blank">
                   <IconButton
                     aria-label="twitter"
                     variant="ghost"
-                    colorScheme="cyan"
-                    icon={<SiX />}
+                    colorPalette="cyan"
                     mx={2}
                     fontSize="18px"
-                  />
+                  >
+                    <SiX />
+                  </IconButton>
                 </Link>
                 <Link href="https://bsky.app/profile/myuu.dev" target="_blank">
                   <IconButton
                     aria-label="bluesky"
                     variant="ghost"
-                    colorScheme="cyan"
-                    icon={<SiBluesky />}
+                    colorPalette="cyan"
                     mx={2}
                     fontSize="18px"
-                  />
+                  >
+                    <SiBluesky />
+                  </IconButton>
                 </Link>
                 <Link href="https://github.com/Nanamiiiii" target="_blank">
                   <IconButton
                     aria-label="github"
                     variant="ghost"
-                    colorScheme="cyan"
-                    icon={<SiGithub />}
+                    colorPalette="cyan"
                     mx={2}
                     fontSize="18px"
-                  />
+                  >
+                    <SiGithub />
+                  </IconButton>
                 </Link>
                 <Link href="https://vimeo.com/user108826812" target="_blank">
                   <IconButton
                     aria-label="vimeo"
                     variant="ghost"
-                    colorScheme="cyan"
-                    icon={<SiVimeo />}
+                    colorPalette="cyan"
                     mx={2}
                     fontSize="18px"
-                  />
+                  >
+                    <SiVimeo />
+                  </IconButton>
                 </Link>
                 <Link href="https://www.instagram.com/773skiz/" target="_blank">
                   <IconButton
                     aria-label="instagram"
                     variant="ghost"
-                    colorScheme="cyan"
-                    icon={<SiInstagram />}
+                    colorPalette="cyan"
                     mx={2}
                     fontSize="18px"
-                  />
+                  >
+                    <SiInstagram />
+                  </IconButton>
                 </Link>
                 <Link
                   href="https://www.facebook.com/akihiro.lx00"
@@ -264,11 +261,12 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="facebook"
                     variant="ghost"
-                    colorScheme="cyan"
-                    icon={<SiFacebook />}
+                    colorPalette="cyan"
                     mx={2}
                     fontSize="18px"
-                  />
+                  >
+                    <SiFacebook />
+                  </IconButton>
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/akihiro-saiki-88b846232/"
@@ -277,52 +275,59 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="Linkedin"
                     variant="ghost"
-                    colorScheme="cyan"
-                    icon={<SiLinkedin />}
+                    colorPalette="cyan"
                     mx={2}
                     fontSize="18px"
-                  />
+                  >
+                    <SiLinkedin />
+                  </IconButton>
                 </Link>
-                <Popover>
-                  <PopoverTrigger>
+                <Popover.Root>
+                  <Popover.Trigger asChild>
                     <IconButton
                       aria-label="Mail"
                       variant="ghost"
-                      colorScheme="cyan"
-                      icon={<IoMdMail />}
+                      colorPalette="cyan"
                       mx={2}
                       fontSize="18px"
-                    />
-                  </PopoverTrigger>
-                  <PopoverContent
-                    color="white"
-                    bg="blue.800"
-                    borderColor="blue.800"
-                  >
-                    <PopoverArrow bg="blue.800" />
-                    <PopoverBody textAlign="center">
-                      sk [at] myuu.dev
-                      <br />
-                      saiki [at] kasahara.cs.waseda.ac.jp
-                    </PopoverBody>
-                    <PopoverFooter textAlign="center" fontSize="14px">
-                      Please replace [at] to @
-                    </PopoverFooter>
-                  </PopoverContent>
-                </Popover>
+                    >
+                      <IoMdMail />
+                    </IconButton>
+                  </Popover.Trigger>
+                  <Portal>
+                    <Popover.Positioner>
+                      <Popover.Content>
+                        <Popover.Arrow>
+                          <Popover.ArrowTip />
+                        </Popover.Arrow>
+                        <Popover.Body textAlign="center" fontSize="16px">
+                          sk [at] myuu.dev
+                          <br />
+                          saiki [at] kasahara.cs.waseda.ac.jp
+                        </Popover.Body>
+                        <Popover.Footer
+                          ms="unset"
+                          display="flex"
+                          justifyContent="center"
+                        >
+                          Please replace [at] to @
+                        </Popover.Footer>
+                      </Popover.Content>
+                    </Popover.Positioner>
+                  </Portal>
+                </Popover.Root>
               </Box>
             </Box>
           </Box>
 
-          <Section delay={'0.1'}>
-            <Heading
-              as="h3"
+          <Section delay={0.1}>
+            <CustomHeading
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               Bio
-            </Heading>
+            </CustomHeading>
             <ItemizeSection>
               <ItemizeName>Handle</ItemizeName>
               Nanamiiiii (as Dev.) / Myuu (as Creator)
@@ -333,21 +338,22 @@ const Home: NextPage = async () => {
             </ItemizeSection>
           </Section>
 
-          <Section delay={'0.15'}>
-            <Heading
+          <Section delay={0.15}>
+            <CustomHeading
               as="h3"
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               Academic Background
-            </Heading>
+            </CustomHeading>
             <ItemizeSection>
               <ItemizeName>2013.04 - 2019.03</ItemizeName>
               <Link
                 href="https://www.niigata-meikun.ed.jp/"
                 color="gray.800"
-                isExternal
+                target="_blank"
+                pl={14}
               >
                 Niigata Meikun J.H.S. / H.S., Japan
               </Link>
@@ -365,7 +371,8 @@ const Home: NextPage = async () => {
               <Link
                 href="https://www.fse.sci.waseda.ac.jp/"
                 color="gray.800"
-                isExternal
+                target="_blank"
+                pl={14}
               >
                 Waseda University, Japan
               </Link>
@@ -384,15 +391,15 @@ const Home: NextPage = async () => {
             </ItemizeSection>
           </Section>
 
-          <Section delay={'0.2'}>
-            <Heading
+          <Section delay={0.2}>
+            <CustomHeading
               as="h3"
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               Career
-            </Heading>
+            </CustomHeading>
             <ItemizeSection>
               <ItemizeName>2021.08 - 2024.03</ItemizeName>
               Security Engineer at Pentio Co., Ltd. (internship)
@@ -403,15 +410,15 @@ const Home: NextPage = async () => {
             </ItemizeSection>
           </Section>
 
-          <Section delay={'0.25'}>
-            <Heading
+          <Section delay={0.25}>
+            <CustomHeading
               as="h3"
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               Research
-            </Heading>
+            </CustomHeading>
             Kimura Laboratory, Waseda Univ. <br />
             Advanced Processor Architecture
             <ItemizeSection>
@@ -422,7 +429,7 @@ const Home: NextPage = async () => {
             </ItemizeSection>
           </Section>
 
-          <Section delay={'0.3'}>
+          <Section delay={0.3}>
             <PubSection
               reviewed={reviewedPub}
               noreview={noreviewPub}
@@ -431,30 +438,30 @@ const Home: NextPage = async () => {
             />
           </Section>
 
-          <Section delay={'0.35'}>
-            <Heading
+          <Section delay={0.35}>
+            <CustomHeading
               as="h3"
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               Awards
-            </Heading>
+            </CustomHeading>
             <ItemizeSection>
               <ItemizeName>2024.03</ItemizeName>
               IEICE CPSY Presentation Award for Excellent Young Researcher
             </ItemizeSection>
           </Section>
 
-          <Section delay={'0.4'}>
-            <Heading
+          <Section delay={0.4}>
+            <CustomHeading
               as="h3"
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               Interest
-            </Heading>
+            </CustomHeading>
             <Paragraph>Basically Low-layer Technologies</Paragraph>
             <Paragraph>Computer Architecture / Operating System </Paragraph>
             <Paragraph>
@@ -462,75 +469,77 @@ const Home: NextPage = async () => {
             </Paragraph>
           </Section>
 
-          <Section delay={'0.45'}>
-            <Heading
+          <Section delay={0.45}>
+            <CustomHeading
               as="h3"
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               Hobbies
-            </Heading>
-            <UnorderedList>
-              <ListItem>
+            </CustomHeading>
+            <List.Root ps={4}>
+              <List.Item>
                 Games
-                <UnorderedList>
-                  <ListItem>
+                <List.Root ps={8}>
+                  <List.Item>
                     Call of Duty, VALORANT, ... (FPS makes people crazy...)
-                  </ListItem>
-                  <ListItem>Resident Evil (Played almost all titles.)</ListItem>
-                </UnorderedList>
-              </ListItem>
-              <ListItem>
+                  </List.Item>
+                  <List.Item>
+                    Resident Evil (Played almost all titles.)
+                  </List.Item>
+                </List.Root>
+              </List.Item>
+              <List.Item>
                 Movie Creation
-                <UnorderedList>
-                  <ListItem>MotionGraphics</ListItem>
-                  <ListItem>Gameplay Montage (past)</ListItem>
-                </UnorderedList>
-              </ListItem>
-              <ListItem>
+                <List.Root ps={8}>
+                  <List.Item>MotionGraphics</List.Item>
+                  <List.Item>Gameplay Montage (past)</List.Item>
+                </List.Root>
+              </List.Item>
+              <List.Item>
                 PC / Gadget
-                <UnorderedList>
-                  <ListItem>DIY PC is awsome! (Prefer NZXT)</ListItem>
-                  <ListItem>
+                <List.Root ps={8}>
+                  <List.Item>DIY PC is awsome! (Prefer NZXT)</List.Item>
+                  <List.Item>
                     Xperia (Sorry, I&apos;m using Pixel 8 Pro now...)
-                  </ListItem>
-                </UnorderedList>
-              </ListItem>
-              <ListItem>
+                  </List.Item>
+                </List.Root>
+              </List.Item>
+              <List.Item>
                 Sports
-                <UnorderedList>
-                  <ListItem>
+                <List.Root ps={8}>
+                  <List.Item>
                     Watch soccer match (Love Albirex Niigata in J.League)
-                  </ListItem>
-                </UnorderedList>
-              </ListItem>
-              <ListItem>
+                  </List.Item>
+                </List.Root>
+              </List.Item>
+              <List.Item>
                 Music
-                <UnorderedList>
-                  <ListItem>
+                <List.Root ps={8}>
+                  <List.Item>
                     Coldrain, MY FIRST STORY, SECONDWALL and <i>Dojin</i> Music
-                  </ListItem>
-                </UnorderedList>
-              </ListItem>
-              <ListItem>
+                  </List.Item>
+                </List.Root>
+              </List.Item>
+              <List.Item>
                 Anime
-                <UnorderedList>
-                  <ListItem>Especially like works around 2010.</ListItem>
-                </UnorderedList>
-              </ListItem>
-            </UnorderedList>
+                <List.Root ps={8}>
+                  <List.Item>Especially like works around 2010.</List.Item>
+                </List.Root>
+              </List.Item>
+            </List.Root>
           </Section>
 
-          <Section delay={'0.5'}>
-            <Heading
+          <Section delay={0.5}>
+            <CustomHeading
               as="h3"
               variant="section-title"
               fontSize={20}
               fontWeight="300"
             >
               PGP Public Key
-            </Heading>
+            </CustomHeading>
             Created new pgp key on 2024-10-03.
             <br />
             <pre>
@@ -539,6 +548,7 @@ const Home: NextPage = async () => {
                 className="hljs"
                 borderRadius={10}
                 overflowX="scroll"
+                fontSize={16}
               >
                 pub ed25519 2024-10-03 [SC]
                 <br />
@@ -552,6 +562,7 @@ const Home: NextPage = async () => {
                 className="hljs"
                 borderRadius={10}
                 overflowX="scroll"
+                fontSize={16}
               >
                 -----BEGIN PGP PUBLIC KEY BLOCK-----
                 <br />

@@ -3,7 +3,7 @@ import {
   Heading,
   Text,
   Container,
-  Divider,
+  Separator,
   Button,
 } from '@chakra-ui/react'
 import { NextPage } from 'next'
@@ -16,7 +16,7 @@ const NotFound: NextPage = () => {
       <Container>
         <Heading as="h1">404 Not Found</Heading>
         <Text>そんなものはなかった…</Text>
-        <Divider my={6} />
+        <Separator my={6} />
 
         <Box display="flex" my={6} justifyContent="center">
           <NextLink href="/" passHref>

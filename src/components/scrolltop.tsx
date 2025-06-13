@@ -1,10 +1,11 @@
 'use client'
-import { Icon, useBoolean } from '@chakra-ui/react'
+import { Icon } from '@chakra-ui/react'
 import { FC, useEffect } from 'react'
 import { RiArrowUpSLine } from 'react-icons/ri'
+import { useBoolean } from 'react-use'
 
 export const ScrollToTop: FC = () => {
-  const [showButton, setShowButton] = useBoolean()
+  const [showButton, setShowButton] = useBoolean(false)
 
   useEffect(() => {
     window.addEventListener('scroll', watchScroll)
@@ -17,9 +18,9 @@ export const ScrollToTop: FC = () => {
     const basePosition = 200
     const scrollPosition = window.scrollY
     if (basePosition <= scrollPosition) {
-      setShowButton.on()
+      setShowButton(true)
     } else {
-      setShowButton.off()
+      setShowButton(false)
     }
   }
 

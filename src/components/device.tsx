@@ -1,16 +1,18 @@
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import { Heading, Box, Link, Badge } from '@chakra-ui/react'
 import NextImage, { StaticImageData } from 'next/image'
 import NextLink from 'next/link'
+import { IoChevronForwardSharp } from 'react-icons/io5'
 
 export const Title = ({ children }: { children: any }) => (
   <Box>
-    <Link as={NextLink} href="/env" fontStyle="italic" passHref>
-      My Env.
+    <Link fontStyle="italic" asChild>
+      <NextLink href="/env" passHref>
+        My Env.
+      </NextLink>
     </Link>
     <span>
       &nbsp;
-      <ChevronRightIcon />
+      <IoChevronForwardSharp />
       &nbsp;
     </span>
     <Heading

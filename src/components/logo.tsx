@@ -1,5 +1,5 @@
 'use client'
-import { Text, useColorModeValue } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { Gwendolyn } from 'next/font/google'
 import Link from 'next/link'
@@ -29,7 +29,7 @@ const Logo = () => {
     <Link href="/">
       <LogoBox>
         <Text
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          color="gray.800"
           fontFamily={Gwendolyn_regular.style.fontFamily}
           fontWeight="normal"
         >

@@ -70,8 +70,10 @@ export const DeviceContent = ({
           zIndex={1}
         >
           <Heading as="h3" fontSize={18} fontWeight="300">
-            <LinkOverlay as={NextLink} href={href} passHref>
-              {children}
+            <LinkOverlay asChild>
+              <NextLink href={href} passHref>
+                {children}
+              </NextLink>
             </LinkOverlay>
           </Heading>
         </Box>
