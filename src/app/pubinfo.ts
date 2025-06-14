@@ -8,6 +8,7 @@ export type Publication = {
   author: Author[]
   publishedTo: string
   publishedOn: string
+  url?: string
 }
 
 const saiki_en = {
@@ -74,6 +75,7 @@ export const reviewedPub: Publication[] = [
     publishedOn: 'Dec 2023',
     publishedTo:
       '16th IEEE International Symposium on Embedded Multicore/Manycore SoCs (MCSoC-2023)',
+    url: 'https://ieeexplore.ieee.org/abstract/document/10387877',
   },
 ]
 
@@ -85,6 +87,7 @@ export const noreviewPub: Publication[] = [
     publishedOn: 'Mar 2025',
     publishedTo:
       '組込み技術とネットワークに関するワークショップ ETNET2025 (IEICE CPSY)',
+    url: 'https://app.box.com/s/av47b7m0zjhclvrnw6j95rrcggqg2d92',
   },
   {
     title:
@@ -93,6 +96,7 @@ export const noreviewPub: Publication[] = [
     publishedOn: 'Mar 2025',
     publishedTo:
       '組込み技術とネットワークに関するワークショップ ETNET2025 (IEICE CPSY)',
+    url: 'https://app.box.com/s/cwwi6nc7gbpa1ilhvm9vma1r9ys7cuno',
   },
   {
     title:
@@ -101,6 +105,7 @@ export const noreviewPub: Publication[] = [
     publishedOn: 'Jul 2024',
     publishedTo:
       'Summer United Workshops on Parallel, Distributed and Cooperative Processing SWoPP2024 (IEICE CPSY)',
+    url: 'https://ipsj.ixsq.nii.ac.jp/records/237617',
   },
   {
     title:
@@ -109,6 +114,7 @@ export const noreviewPub: Publication[] = [
     publishedOn: 'Mar 2024',
     publishedTo:
       '組込み技術とネットワークに関するワークショップ ETNET2024 (IEICE CPSY)',
+    url: 'https://www.kasahara.cs.waseda.ac.jp/achieve/pdf/y2023/IPSJ-ARC24256033.pdf',
   },
   {
     title: 'RISC-V KeystoneにおけるEnclaveアプリケーションキャッシュ機能の拡張',
@@ -116,12 +122,14 @@ export const noreviewPub: Publication[] = [
     publishedOn: 'Aug 2023',
     publishedTo:
       '並列/分散/協調処理に関するサマー・ワークショップ (SWoPP 2023)',
+    url: 'https://www.kasahara.cs.waseda.ac.jp/achieve/pdf/y2023/IPSJ-ARC23254013.pdf',
   },
   {
     title: 'RISC-V SoCにおけるSecure Bootの実装と検証の高速化に向けた評価',
     author: [saiki_jp, uyiromo_jp, kimura_jp],
     publishedOn: 'Mar 2023',
     publishedTo: '組込み技術とネットワークに関するワークショップ ETNET2023',
+    url: 'https://www.kasahara.cs.waseda.ac.jp/achieve/pdf/y2022/IPSJ-ARC23252016.pdf',
   },
 ]
 

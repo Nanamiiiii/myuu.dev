@@ -15,7 +15,6 @@ import {
   SiJavascript,
   SiHaskell,
   SiOcaml,
-  SiDotnet,
   SiKubernetes,
   SiDocker,
   SiQemu,
@@ -24,9 +23,15 @@ import {
   SiGooglecloud,
   SiLua,
   SiNixos,
+  SiRiscv,
+  SiFsharp,
+  SiAdobeaftereffects,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiAdobeillustrator,
 } from 'react-icons/si'
 import { TbBrandCSharp } from 'react-icons/tb'
-import { VscVscode, VscAzure } from 'react-icons/vsc'
+import { VscAzure } from 'react-icons/vsc'
 import { CustomHeading } from '../../components/heading'
 import { ItemizeName, ItemizeSection } from '../../components/itemize'
 
@@ -34,8 +39,56 @@ export const Component = () => {
   return (
     <Container maxWidth="100%" fontSize="18px">
       <Heading as="h3" fontSize={25} mt={2} mb={4} fontWeight="300">
-        Development Skills
+        Skills &amp; Favorites
       </Heading>
+
+      <CustomHeading
+        as="h4"
+        fontSize={20}
+        mb={6}
+        variant="section-title"
+        fontWeight="300"
+      >
+        Editor
+      </CustomHeading>
+      <Box display="flex" py={2} pl={4} overflow="auto">
+        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiNeovim />
+          </Tag.StartElement>
+          <Tag.Label>Neovim</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiVim />
+          </Tag.StartElement>
+          <Tag.Label>Vim</Tag.Label>
+        </Tag.Root>
+      </Box>
+
+      <CustomHeading
+        as="h4"
+        fontSize={20}
+        mb={6}
+        variant="section-title"
+        fontWeight="300"
+      >
+        Operating System
+      </CustomHeading>
+      <Box display="flex" py={2} pl={4} overflow="auto">
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiNixos />
+          </Tag.StartElement>
+          <Tag.Label>NixOS</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiArchlinux />
+          </Tag.StartElement>
+          <Tag.Label>ArchLinux</Tag.Label>
+        </Tag.Root>
+      </Box>
 
       <CustomHeading
         as="h4"
@@ -44,7 +97,7 @@ export const Component = () => {
         variant="section-title"
         fontWeight="300"
       >
-        Programming
+        Programming Lang.
       </CustomHeading>
       <Heading as="h5" fontSize={18} mb={2} fontWeight="300">
         Awesome
@@ -56,11 +109,11 @@ export const Component = () => {
           </Tag.StartElement>
           <Tag.Label>Rust</Tag.Label>
         </Tag.Root>
-        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiGo />
+            <SiNixos />
           </Tag.StartElement>
-          <Tag.Label>Go</Tag.Label>
+          <Tag.Label>Nix</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
           <Tag.StartElement>
@@ -75,18 +128,33 @@ export const Component = () => {
           <Tag.Label>C++</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
-          <Tag.Label>RISC-V Assembly</Tag.Label>
+          <Tag.StartElement>
+            <SiRiscv />
+          </Tag.StartElement>
+          <Tag.Label>RISC-V ASM</Tag.Label>
         </Tag.Root>
       </Box>
       <Heading as="h5" fontSize={18} mt={4} mb={2} fontWeight="300">
         Be used to
       </Heading>
       <Box display="flex" py={2} pl={4} overflow="auto">
+        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiGo />
+          </Tag.StartElement>
+          <Tag.Label>Go</Tag.Label>
+        </Tag.Root>
         <Tag.Root colorPalette="red" mx={2} flexShrink="0">
           <Tag.StartElement>
             <SiRuby />
           </Tag.StartElement>
           <Tag.Label>Ruby</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiFsharp />
+          </Tag.StartElement>
+          <Tag.Label>F#</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="teal" mx={2} flexShrink="0">
           <Tag.StartElement>
@@ -147,18 +215,6 @@ export const Component = () => {
             <SiOcaml />
           </Tag.StartElement>
           <Tag.Label>OCaml</Tag.Label>
-        </Tag.Root>
-      </Box>
-
-      <Heading as="h5" fontSize={18} mt={4} mb={2} fontWeight="300">
-        Framework
-      </Heading>
-      <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
-          <Tag.StartElement>
-            <SiDotnet />
-          </Tag.StartElement>
-          <Tag.Label>.NET</Tag.Label>
         </Tag.Root>
       </Box>
 
@@ -235,53 +291,34 @@ export const Component = () => {
         variant="section-title"
         fontWeight="300"
       >
-        Operating System
-      </CustomHeading>
-      <Box display="flex" py={2} pl={4} overflow="auto">
-        <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
-          <Tag.StartElement>
-            <SiNixos />
-          </Tag.StartElement>
-          <Tag.Label>NixOS</Tag.Label>
-        </Tag.Root>
-        <Tag.Root colorPalette="cyan" mx={2} flexShrink="0">
-          <Tag.StartElement>
-            <SiArchlinux />
-          </Tag.StartElement>
-          <Tag.Label>ArchLinux</Tag.Label>
-        </Tag.Root>
-      </Box>
-
-      <CustomHeading
-        as="h4"
-        fontSize={20}
-        mb={6}
-        variant="section-title"
-        fontWeight="300"
-      >
-        Editor
+        Creative
       </CustomHeading>
       <Box display="flex" py={2} pl={4} mb={6} overflow="auto">
-        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+        <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiNeovim />
+            <SiAdobeaftereffects />
           </Tag.StartElement>
-          <Tag.Label>Neovim</Tag.Label>
+          <Tag.Label>Adobe After Effects</Tag.Label>
         </Tag.Root>
-        <Tag.Root colorPalette="green" mx={2} flexShrink="0">
+        <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiVim />
+            <SiAdobepremierepro />
           </Tag.StartElement>
-          <Tag.Label>Vim</Tag.Label>
+          <Tag.Label>Adobe Premier Pro</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <VscVscode />
+            <SiAdobephotoshop />
           </Tag.StartElement>
-          <Tag.Label>VSCode</Tag.Label>
+          <Tag.Label>Adobe Photoshop</Tag.Label>
+        </Tag.Root>
+        <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
+          <Tag.StartElement>
+            <SiAdobeillustrator />
+          </Tag.StartElement>
+          <Tag.Label>Adobe Illustrator</Tag.Label>
         </Tag.Root>
       </Box>
-
       <Separator />
 
       <Heading as="h3" fontSize={25} mt={6} mb={2} fontWeight="300">

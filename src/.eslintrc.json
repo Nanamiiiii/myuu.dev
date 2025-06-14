@@ -3,11 +3,7 @@
     "React": true,
     "JSX": true
   },
-  "extends": [
-    "eslint:recommended",
-    "next",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "next", "prettier"],
   "rules": {
     "import/order": [
       "error",

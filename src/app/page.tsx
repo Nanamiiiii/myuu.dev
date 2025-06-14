@@ -51,10 +51,12 @@ export const generateMetadata = async (
 const AchievementsCard = ({
   title,
   booktitle,
+  url,
   children,
 }: {
   title: string
   booktitle: string
+  url?: string
   children: any
 }) => {
   return (
@@ -67,7 +69,13 @@ const AchievementsCard = ({
     >
       <Card.Header pb="0">
         <Heading fontSize="18px" fontFamily="Hack, monospace">
-          {title}
+          {url ? (
+            <Link href={url} target="_blank">
+              {title}
+            </Link>
+          ) : (
+            <>{title}</>
+          )}
         </Heading>
         <Text fontSize="16px">{children}</Text>
       </Card.Header>
@@ -112,6 +120,7 @@ const PubSection = ({
                     title={pub.title}
                     booktitle={`${pub.publishedTo}, ${pub.publishedOn}`}
                     key={`${name}-${idx}`}
+                    url={pub.url}
                   >
                     {pub.author.map((author, idx) => {
                       if (author.myname) {
@@ -353,15 +362,14 @@ const Home: NextPage = async () => {
                 href="https://www.niigata-meikun.ed.jp/"
                 color="gray.800"
                 target="_blank"
-                pl={14}
               >
                 Niigata Meikun J.H.S. / H.S., Japan
               </Link>
-              <ItemizeSection>
+              <ItemizeSection style={{ textIndent: '3em' }}>
                 <ItemizeName>2013.04 - 2016.03</ItemizeName>
                 Niigata Meikun J.H.S.
               </ItemizeSection>
-              <ItemizeSection>
+              <ItemizeSection style={{ textIndent: '3em' }}>
                 <ItemizeName>2016.04 - 2019.03</ItemizeName>
                 Niigata Meikun H.S.
               </ItemizeSection>
@@ -372,19 +380,18 @@ const Home: NextPage = async () => {
                 href="https://www.fse.sci.waseda.ac.jp/"
                 color="gray.800"
                 target="_blank"
-                pl={14}
               >
                 Waseda University, Japan
               </Link>
-              <ItemizeSection>
+              <ItemizeSection style={{ textIndent: '3em' }}>
                 <ItemizeName>2019.04 - 2023.03</ItemizeName>
                 School of Fundamental Science and Engineering.
               </ItemizeSection>
-              <ItemizeSection>
+              <ItemizeSection style={{ textIndent: '3em' }}>
                 <ItemizeName>2023.04 - 2024.03</ItemizeName>
                 Graduate School of Fundamental Science and Engineering (Master).
               </ItemizeSection>
-              <ItemizeSection>
+              <ItemizeSection style={{ textIndent: '3em' }}>
                 <ItemizeName>2024.04 - Now</ItemizeName>
                 Graduate School of Fundamental Science and Engineering (Ph.D).
               </ItemizeSection>
@@ -449,7 +456,12 @@ const Home: NextPage = async () => {
             </CustomHeading>
             <ItemizeSection>
               <ItemizeName>2024.03</ItemizeName>
-              IEICE CPSY Presentation Award for Excellent Young Researcher
+              <Link
+                href="https://www.ieice.org/~cpsy/award.shtml"
+                target="_blank"
+              >
+                IEICE CPSY Presentation Award for Excellent Young Researcher
+              </Link>
             </ItemizeSection>
           </Section>
 
@@ -518,7 +530,8 @@ const Home: NextPage = async () => {
                 Music
                 <List.Root ps={8}>
                   <List.Item>
-                    Coldrain, MY FIRST STORY, SECONDWALL and <i>Dojin</i> Music
+                    Coldrain, MY FIRST STORY, SECONDWALL and{' '}
+                    <span style={{ fontStyle: 'italic' }}>Dojin</span> Music
                   </List.Item>
                 </List.Root>
               </List.Item>
@@ -540,7 +553,7 @@ const Home: NextPage = async () => {
             >
               PGP Public Key
             </CustomHeading>
-            Created new pgp key on 2024-10-03.
+            Created a new PGP key on 2024-10-03.
             <br />
             <pre>
               <Box
