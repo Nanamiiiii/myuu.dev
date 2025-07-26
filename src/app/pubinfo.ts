@@ -68,6 +68,7 @@ export const reviewedPub: Publication[] = [
     publishedOn: 'Jul 2025',
     publishedTo:
       '8th Workshop on System Software for Trusted Execution (SysTEX 2025)',
+    url: 'https://systex-workshop.github.io/2025/papers/systex25-final91.pdf',
   },
   {
     title: 'Parallel Verification in RISC-V Secure Boot',
