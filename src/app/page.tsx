@@ -563,9 +563,9 @@ const Home: NextPage = async () => {
                 overflowX="scroll"
                 fontSize={16}
               >
-                pub ed25519 2024-10-03 [SC]
+                pub   ed25519 2024-10-03 [C]
                 <br />
-                EF868D07BBE906673ECCF715E79A0A2575F66DA2
+                EF86 8D07 BBE9 0667 3ECC  F715 E79A 0A25 75F6 6DA2
               </Box>
             </pre>
             <br />
@@ -582,13 +582,13 @@ const Home: NextPage = async () => {
                 <br />
                 mDMEZv5KGhYJKwYBBAHaRw8BAQdANqyDUJXUHiAbqdxXkgrAk6AxOeJJrSAeTZ9v
                 <br />
-                cFQceA60G0FraWhpcm8gU2Fpa2kgPHNrQG15dXUuZGV2PoiTBBMWCgA7FiEE74aN
+                cFQceA60G0FraWhpcm8gU2Fpa2kgPHNrQG15dXUuZGV2PoiTBBMWCgA7BQsJCAcC
                 <br />
-                B7vpBmc+zPcV55oKJXX2baIFAmb+ShoCGwMFCwkIBwICIgIGFQoJCAsCBBYCAwEC
+                AiICBhUKCQgLAgQWAgMBAh4HAheAFiEE74aNB7vpBmc+zPcV55oKJXX2baIFAmiF
                 <br />
-                HgcCF4AACgkQ55oKJXX2baKtYwEAoQ8Uf+3gK8Nu+qiStcEjg9PL2mhLQ3yG9jgY
+                vn8CGwEACgkQ55oKJXX2baI/RQEArt3RXZ+1qxis4E939AAuDMqCBjr9jte6YRk7
                 <br />
-                rcK3fY4A+QHd20MZlaNTFPKAwbkdLCVS9WsMiYZf9AcfapO1aUgBuDgEZv5KGhIK
+                rKzLcXUA/3WBbbZkJF54NgK5yf7usPFrhGjws3G43x5hOkPeIkIHuDgEZv5KGhIK
                 <br />
                 KwYBBAGXVQEFAQEHQPOZVouTc1WtZRiMNrucFPumvkZMC0S4UYygMLpLiUleAwEI
                 <br />
@@ -596,9 +596,29 @@ const Home: NextPage = async () => {
                 <br />
                 JXX2baJ/AQEAoxU20tot+T1OE37dFmRXF2+wTLhg5TlHqingLNduN38A/1JZ8gIS
                 <br />
-                zdnT/jzk5ATqeKsz59h8u5mJPNd2Thzt7EsF
+                zdnT/jzk5ATqeKsz59h8u5mJPNd2Thzt7EsFuDMEaIW9RBYJKwYBBAHaRw8BAQdA
                 <br />
-                =dDaC
+                gwbnd3JOMHn41U1gCsEI4QJlSDarxJvvTKKyZguoRl6I7wQYFgoAIBYhBO+GjQe7
+                <br />
+                6QZnPsz3FeeaCiV19m2iBQJohb1EAhsCAIEJEOeaCiV19m2idiAEGRYKAB0WIQQs
+                <br />
+                IcgsSX7SR199q9XHJTb97r+ReAUCaIW9RAAKCRDHJTb97r+ReNYKAP9R8r+aUxSZ
+                <br />
+                ksJLJyY6W+kUq57+IVJuxwQYpr+3lwGa2wEA/T6zXgPBDi8UasZAKZt2iIW5hgcs
+                <br />
+                VfEGbOYivDXcoAY9/AD/cEITgBXMuSHN/1EH/ABaNW57rl+OiML7v/kROBjMdIwA
+                <br />
+                /jMKmE2iDwm0Cx7tra/Kxdwku9wbxiEUFOoqugizC4YAuDMEaIW+oRYJKwYBBAHa
+                <br />
+                Rw8BAQdAacZX9q3IlCZBB+5YKHQANb3G/Ydd7WLut6AtY0OEp1+IeAQYFgoAIBYh
+                <br />
+                BO+GjQe76QZnPsz3FeeaCiV19m2iBQJohb6hAhsgAAoJEOeaCiV19m2iS8QA/iJ4
+                <br />
+                jyT+KmY+7rl2ZBJX2ogFIUmRog3WF1JnBOAwPF8xAP937lKgsCvy/uibdPD4K90g
+                <br />
+                CNjyq9FCmLMnmS8L1oNMDA==
+                <br />
+                =y7kj
                 <br />
                 -----END PGP PUBLIC KEY BLOCK-----
               </Box>
