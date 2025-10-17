@@ -56,6 +56,16 @@ const uranami_jp = {
   myname: false,
 }
 
+const uranami_en = {
+  name: 'Hidetoshi Uranami',
+  myname: false,
+}
+
+const yoshi_en = {
+  name: 'Yoshiaki Sato',
+  myname: false,
+}
+
 const ding_en = {
   name: 'Jianxuan Ding',
   myname: false,
@@ -80,7 +90,7 @@ export const reviewedPub: Publication[] = [
   },
 ]
 
-export const noreviewPub: Publication[] = [
+export const tecrepPub: Publication[] = [
   {
     title:
       'RISC-V Keystone における Enclave キャッシュのキャッシュ管理機構の改良',
@@ -149,5 +159,16 @@ export const thesisPub: Publication[] = [
     author: [saiki_jp],
     publishedOn: 'Jan 2023',
     publishedTo: 'Graduation Thesis',
+  },
+]
+
+export const peerposterPub: Publication[] = [
+  {
+    title:
+      'Towards GPU Passthrough in Intel TDX: Design Challenges and Early Baselines',
+    author: [yoshi_en, uranami_en, saiki_en, kimura_en],
+    publishedOn: 'Oct 2025',
+    publishedTo:
+      'The IEEE 23rd International Conference on Dependable, Autonomic and Secure Computing (DASC)',
   },
 ]

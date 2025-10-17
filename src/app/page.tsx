@@ -12,8 +12,10 @@ import {
   Popover,
   List,
   Portal,
+  Button,
 } from '@chakra-ui/react'
 import type { Metadata, NextPage, ResolvingMetadata } from 'next'
+import { FaKey } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import {
   SiX,
@@ -29,8 +31,8 @@ import { ItemizeName, ItemizeSection } from '../components/itemize'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { Publication } from './pubinfo'
-import { reviewedPub, noreviewPub, journalPub, thesisPub } from './pubinfo'
+import { peerposterPub, Publication, tecrepPub } from './pubinfo'
+import { reviewedPub, journalPub, thesisPub } from './pubinfo'
 
 import 'highlight.js/styles/tokyo-night-dark.css'
 
@@ -90,14 +92,16 @@ const AchievementsCard = ({
 
 const PubSection = ({
   reviewed,
-  noreview,
+  tecrep,
   journal,
   thesis,
+  peerposter,
 }: {
   reviewed: Publication[]
-  noreview: Publication[]
+  tecrep: Publication[]
   journal: Publication[]
   thesis: Publication[]
+  peerposter: Publication[]
 }) => {
   const PubItem = ({ items, name }: { items: Publication[]; name: string }) => {
     if (items.length == 0) return <></>
@@ -156,9 +160,10 @@ const PubSection = ({
         Publications
       </CustomHeading>
       <Accordion.Root multiple>
-        <PubItem items={journal} name="Journal" />
-        <PubItem items={reviewed} name="Peer Reviewed" />
-        <PubItem items={noreview} name="No Review" />
+        <PubItem items={journal} name="Journals" />
+        <PubItem items={reviewed} name="Peer Reviewed Conferences" />
+        <PubItem items={peerposter} name="Peer Reviewed Posters" />
+        <PubItem items={tecrep} name="Technichal Reports" />
         <PubItem items={thesis} name="Thesis" />
       </Accordion.Root>
     </>
@@ -207,7 +212,7 @@ const Home: NextPage = async () => {
                 University
               </Text>
               <Text fontSize="18px">Research Associate / Ph.D Student</Text>
-              <Box mt={2} alignItems="center" display="flex">
+              <Box mt={2} alignItems="center" display="flex" overflow="auto">
                 <Link href="https://twitter.com/Nanamii_i" target="_blank">
                   <IconButton
                     aria-label="twitter"
@@ -338,12 +343,14 @@ const Home: NextPage = async () => {
               Bio
             </CustomHeading>
             <ItemizeSection>
-              <ItemizeName>Handle</ItemizeName>
-              Nanamiiiii (as Dev.) / Myuu (as Creator)
+              <ItemizeName>Name w/ Handle</ItemizeName>
+              Akihiro{' '}
+              <span style={{ fontStyle: 'italic' }}>&quot;Myuu&quot;</span>{' '}
+              &nbsp;Saiki
             </ItemizeSection>
             <ItemizeSection>
               <ItemizeName>Origin</ItemizeName>
-              Niigata, Niigata, Japan (Very good place to live!)
+              Niigata-City, Niigata, Japan (Very good place to live!)
             </ItemizeSection>
           </Section>
 
@@ -357,44 +364,57 @@ const Home: NextPage = async () => {
               Academic Background
             </CustomHeading>
             <ItemizeSection>
-              <ItemizeName>2013.04 - 2019.03</ItemizeName>
-              <Link
-                href="https://www.niigata-meikun.ed.jp/"
-                color="gray.800"
-                target="_blank"
-              >
-                Niigata Meikun J.H.S. / H.S., Japan
-              </Link>
-              <ItemizeSection style={{ textIndent: '3em' }}>
-                <ItemizeName>2013.04 - 2016.03</ItemizeName>
-                Niigata Meikun J.H.S.
-              </ItemizeSection>
-              <ItemizeSection style={{ textIndent: '3em' }}>
-                <ItemizeName>2016.04 - 2019.03</ItemizeName>
-                Niigata Meikun H.S.
-              </ItemizeSection>
+              <ItemizeName>2024.04 - Now</ItemizeName>
+              <br />
+              <Text textIndent={{ base: '0', md: '1em' }}>
+                Waseda University, Graduate School of Fundamental Science and
+                Engineering, Ph.D.
+              </Text>
+              <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
+                Tokyo, Japan
+              </Text>
             </ItemizeSection>
-            <ItemizeSection>
-              <ItemizeName>2019.04 - Now</ItemizeName>
-              <Link
-                href="https://www.fse.sci.waseda.ac.jp/"
-                color="gray.800"
-                target="_blank"
-              >
-                Waseda University, Japan
-              </Link>
-              <ItemizeSection style={{ textIndent: '3em' }}>
-                <ItemizeName>2019.04 - 2023.03</ItemizeName>
-                School of Fundamental Science and Engineering.
-              </ItemizeSection>
-              <ItemizeSection style={{ textIndent: '3em' }}>
-                <ItemizeName>2023.04 - 2024.03</ItemizeName>
-                Graduate School of Fundamental Science and Engineering (Master).
-              </ItemizeSection>
-              <ItemizeSection style={{ textIndent: '3em' }}>
-                <ItemizeName>2024.04 - Now</ItemizeName>
-                Graduate School of Fundamental Science and Engineering (Ph.D).
-              </ItemizeSection>
+            <ItemizeSection pt={2}>
+              <ItemizeName>2023.04 - 2024.03</ItemizeName>
+              <br />
+              <Text textIndent={{ base: '0', md: '1em' }}>
+                Waseda University, Graduate School of Fundamental Science and
+                Engineering, Master.
+              </Text>
+              <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
+                Tokyo, Japan
+              </Text>
+            </ItemizeSection>
+            <ItemizeSection pt={2}>
+              <ItemizeName>2019.04 - 2023.03</ItemizeName>
+              <br />
+              <Text textIndent={{ base: '0', md: '1em' }}>
+                Waseda University, School of Fundamental Science and
+                Engineering.
+              </Text>
+              <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
+                Tokyo, Japan
+              </Text>
+            </ItemizeSection>
+            <ItemizeSection pt={2}>
+              <ItemizeName>2016.04 - 2019.03</ItemizeName>
+              <br />
+              <Text textIndent={{ base: '0', md: '1em' }}>
+                Niigata Meikun H.S.
+              </Text>
+              <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
+                Niigata, Japan
+              </Text>
+            </ItemizeSection>
+            <ItemizeSection pt={2}>
+              <ItemizeName>2013.04 - 2016.03</ItemizeName>
+              <br />
+              <Text textIndent={{ base: '0', md: '1em' }}>
+                Niigata Meikun J.H.S.
+              </Text>
+              <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
+                Niigata, Japan
+              </Text>
             </ItemizeSection>
           </Section>
 
@@ -408,12 +428,18 @@ const Home: NextPage = async () => {
               Career
             </CustomHeading>
             <ItemizeSection>
-              <ItemizeName>2021.08 - 2024.03</ItemizeName>
-              Security Engineer at Pentio Co., Ltd. (internship)
+              <ItemizeName>2024.04 - Now</ItemizeName>
+              <br />
+              <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
+                Research Associate at Waseda University.
+              </Text>
             </ItemizeSection>
             <ItemizeSection>
-              <ItemizeName>2024.04 - Now</ItemizeName>
-              Research Associate at Waseda University.
+              <ItemizeName>2021.08 - 2024.03</ItemizeName>
+              <br />
+              <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
+                Security Engineer at Pentio Co., Ltd. (internship)
+              </Text>
             </ItemizeSection>
           </Section>
 
@@ -432,16 +458,17 @@ const Home: NextPage = async () => {
               <ItemizeName>
                 <b>Keywords</b>
               </ItemizeName>
-              RISC-V / Secure Computing / Secure Boot / TEE
+              Computer Architecture / Security / TEE
             </ItemizeSection>
           </Section>
 
           <Section delay={0.3}>
             <PubSection
               reviewed={reviewedPub}
-              noreview={noreviewPub}
+              tecrep={tecrepPub}
               journal={journalPub}
               thesis={thesisPub}
+              peerposter={peerposterPub}
             />
           </Section>
 
@@ -460,7 +487,7 @@ const Home: NextPage = async () => {
                 href="https://www.ieice.org/~cpsy/award.shtml"
                 target="_blank"
               >
-                IEICE CPSY Presentation Award for Excellent Young Researcher
+                IEICE CPSY Outstanding Young Researcher Presentation Award
               </Link>
             </ItemizeSection>
           </Section>
@@ -495,7 +522,8 @@ const Home: NextPage = async () => {
                 Games
                 <List.Root ps={8}>
                   <List.Item>
-                    Call of Duty, VALORANT, ... (FPS makes people crazy...)
+                    Call of Duty, Battlefield, VALORANT, ... (FPS makes people
+                    crazy...)
                   </List.Item>
                   <List.Item>
                     Resident Evil (Played almost all titles.)
@@ -513,9 +541,6 @@ const Home: NextPage = async () => {
                 PC / Gadget
                 <List.Root ps={8}>
                   <List.Item>DIY PC is awsome! (Prefer NZXT)</List.Item>
-                  <List.Item>
-                    Xperia (Sorry, I&apos;m using Pixel 8 Pro now...)
-                  </List.Item>
                 </List.Root>
               </List.Item>
               <List.Item>
@@ -553,7 +578,20 @@ const Home: NextPage = async () => {
             >
               PGP Public Key
             </CustomHeading>
-            Created a new PGP key on 2024-10-03.
+            <Link
+              href="https://keys.openpgp.org/search?q=EF868D07BBE906673ECCF715E79A0A2575F66DA2"
+              target="_blank"
+            >
+              <Button
+                aria-label="twitter"
+                variant="surface"
+                colorPalette="cyan"
+                mb={4}
+                fontSize="18px"
+              >
+                <FaKey /> keys.openpgp.org
+              </Button>
+            </Link>
             <br />
             <pre>
               <Box
@@ -563,64 +601,9 @@ const Home: NextPage = async () => {
                 overflowX="scroll"
                 fontSize={16}
               >
-                pub   ed25519 2024-10-03 [C]
+                pub ed25519 2024-10-03 [C]
                 <br />
-                EF86 8D07 BBE9 0667 3ECC  F715 E79A 0A25 75F6 6DA2
-              </Box>
-            </pre>
-            <br />
-            <pre>
-              <Box
-                as="code"
-                className="hljs"
-                borderRadius={10}
-                overflowX="scroll"
-                fontSize={16}
-              >
-                -----BEGIN PGP PUBLIC KEY BLOCK-----
-                <br />
-                <br />
-                mDMEZv5KGhYJKwYBBAHaRw8BAQdANqyDUJXUHiAbqdxXkgrAk6AxOeJJrSAeTZ9v
-                <br />
-                cFQceA60G0FraWhpcm8gU2Fpa2kgPHNrQG15dXUuZGV2PoiTBBMWCgA7BQsJCAcC
-                <br />
-                AiICBhUKCQgLAgQWAgMBAh4HAheAFiEE74aNB7vpBmc+zPcV55oKJXX2baIFAmiF
-                <br />
-                vn8CGwEACgkQ55oKJXX2baI/RQEArt3RXZ+1qxis4E939AAuDMqCBjr9jte6YRk7
-                <br />
-                rKzLcXUA/3WBbbZkJF54NgK5yf7usPFrhGjws3G43x5hOkPeIkIHuDgEZv5KGhIK
-                <br />
-                KwYBBAGXVQEFAQEHQPOZVouTc1WtZRiMNrucFPumvkZMC0S4UYygMLpLiUleAwEI
-                <br />
-                B4h4BBgWCgAgFiEE74aNB7vpBmc+zPcV55oKJXX2baIFAmb+ShoCGwwACgkQ55oK
-                <br />
-                JXX2baJ/AQEAoxU20tot+T1OE37dFmRXF2+wTLhg5TlHqingLNduN38A/1JZ8gIS
-                <br />
-                zdnT/jzk5ATqeKsz59h8u5mJPNd2Thzt7EsFuDMEaIW9RBYJKwYBBAHaRw8BAQdA
-                <br />
-                gwbnd3JOMHn41U1gCsEI4QJlSDarxJvvTKKyZguoRl6I7wQYFgoAIBYhBO+GjQe7
-                <br />
-                6QZnPsz3FeeaCiV19m2iBQJohb1EAhsCAIEJEOeaCiV19m2idiAEGRYKAB0WIQQs
-                <br />
-                IcgsSX7SR199q9XHJTb97r+ReAUCaIW9RAAKCRDHJTb97r+ReNYKAP9R8r+aUxSZ
-                <br />
-                ksJLJyY6W+kUq57+IVJuxwQYpr+3lwGa2wEA/T6zXgPBDi8UasZAKZt2iIW5hgcs
-                <br />
-                VfEGbOYivDXcoAY9/AD/cEITgBXMuSHN/1EH/ABaNW57rl+OiML7v/kROBjMdIwA
-                <br />
-                /jMKmE2iDwm0Cx7tra/Kxdwku9wbxiEUFOoqugizC4YAuDMEaIW+oRYJKwYBBAHa
-                <br />
-                Rw8BAQdAacZX9q3IlCZBB+5YKHQANb3G/Ydd7WLut6AtY0OEp1+IeAQYFgoAIBYh
-                <br />
-                BO+GjQe76QZnPsz3FeeaCiV19m2iBQJohb6hAhsgAAoJEOeaCiV19m2iS8QA/iJ4
-                <br />
-                jyT+KmY+7rl2ZBJX2ogFIUmRog3WF1JnBOAwPF8xAP937lKgsCvy/uibdPD4K90g
-                <br />
-                CNjyq9FCmLMnmS8L1oNMDA==
-                <br />
-                =y7kj
-                <br />
-                -----END PGP PUBLIC KEY BLOCK-----
+                EF86 8D07 BBE9 0667 3ECC F715 E79A 0A25 75F6 6DA2
               </Box>
             </pre>
           </Section>
