@@ -213,7 +213,7 @@ const Home: NextPage = async () => {
               </Text>
               <Text fontSize="18px">Research Associate / Ph.D Student</Text>
               <Box mt={2} alignItems="center" display="flex" overflow="auto">
-                <Link href="https://twitter.com/Nanamii_i" target="_blank">
+                <Link href="https://twitter.com/rv64gc" target="_blank">
                   <IconButton
                     aria-label="twitter"
                     variant="ghost"
@@ -434,7 +434,7 @@ const Home: NextPage = async () => {
                 Research Associate at Waseda University.
               </Text>
             </ItemizeSection>
-            <ItemizeSection>
+            <ItemizeSection pt={2}>
               <ItemizeName>2021.08 - 2024.03</ItemizeName>
               <br />
               <Text fontStyle="italic" textIndent={{ base: '0', md: '1em' }}>
