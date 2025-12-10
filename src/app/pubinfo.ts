@@ -144,7 +144,16 @@ export const tecrepPub: Publication[] = [
   },
 ]
 
-export const journalPub: Publication[] = []
+export const journalPub: Publication[] = [
+  {
+    title:
+      'Efficient Memory Protection Method for Large-Scale Host-Enclave Data Transfer on Keystone Enclave',
+    author: [saiki_en, kimura_en],
+    publishedOn: 'Jun 2026',
+    publishedTo: 'IEICE TRANSACTIONS on Information and Systems',
+    url: 'https://doi.org/10.1587/transinf.2025EDP7101',
+  },
+]
 
 export const thesisPub: Publication[] = [
   {
