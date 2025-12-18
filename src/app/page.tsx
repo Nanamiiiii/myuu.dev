@@ -17,6 +17,7 @@ import {
 import type { Metadata, NextPage, ResolvingMetadata } from 'next'
 import { FaKey } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
+import { LuExternalLink } from 'react-icons/lu'
 import {
   SiX,
   SiGithub,
@@ -331,6 +332,17 @@ const Home: NextPage = async () => {
                   </Portal>
                 </Popover.Root>
               </Box>
+              <Box mt={2} alignItems="center" display="flex" overflow="auto">
+                <Link
+                  href="https://researchmap.jp/akihirosk"
+                  target="_blank"
+                  colorPalette="cyan"
+                  mx={2}
+                >
+                  researchmap
+                  <LuExternalLink />
+                </Link>
+              </Box>
             </Box>
           </Box>
 
@@ -450,10 +462,24 @@ const Home: NextPage = async () => {
               fontSize={20}
               fontWeight="300"
             >
+              Member
+            </CustomHeading>
+            <List.Root ps={4}>
+              <List.Item>IEEE Computer Society</List.Item>
+              <List.Item>IEEE Eta Kappa Nu (IEEE-HKN)</List.Item>
+            </List.Root>
+          </Section>
+
+          <Section delay={0.3}>
+            <CustomHeading
+              as="h3"
+              variant="section-title"
+              fontSize={20}
+              fontWeight="300"
+            >
               Research
             </CustomHeading>
-            Kimura Laboratory, Waseda Univ. <br />
-            Advanced Processor Architecture
+            Advanced Processor Architecture Lab.
             <ItemizeSection>
               <ItemizeName>
                 <b>Keywords</b>
