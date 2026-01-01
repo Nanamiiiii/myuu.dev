@@ -20,7 +20,12 @@ const NotFound: NextPage = () => {
 
         <Box display="flex" my={6} justifyContent="center">
           <NextLink href="/" passHref>
-            <Button colorScheme="purple">Go Home</Button>
+            <Button
+              colorPalette={{ base: 'cyan', _dark: 'blue' }}
+              variant="outline"
+            >
+              おうちかえる！
+            </Button>
           </NextLink>
         </Box>
       </Container>

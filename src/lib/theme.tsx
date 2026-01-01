@@ -17,8 +17,9 @@ export const HeadingRecipe = defineRecipe({
       'section-title': {
         textDecoration: 'underline',
         fontSize: 20,
+        color: { base: 'cyan.fg', _dark: 'blue.fg' },
         textUnderlineOffset: 6,
-        textDecorationColor: '#525252',
+        textDecorationColor: { base: 'cyan.fg', _dark: 'blue.fg' },
         textDecorationThickness: 2,
         marginTop: 6,
         marginBottom: 4,
@@ -71,7 +72,7 @@ const colors = {
 const system = createSystem(defaultConfig, {
   globalCss: {
     body: {
-      bg: '#f0f8fc',
+      bg: { base: '#f0f8fc', _dark: '#1a1e28' },
     },
   },
   theme: {

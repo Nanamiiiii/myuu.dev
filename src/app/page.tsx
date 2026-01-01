@@ -16,8 +16,8 @@ import {
 } from '@chakra-ui/react'
 import type { Metadata, NextPage, ResolvingMetadata } from 'next'
 import { FaKey } from 'react-icons/fa'
+import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { IoMdMail } from 'react-icons/io'
-import { LuExternalLink } from 'react-icons/lu'
 import {
   SiX,
   SiGithub,
@@ -64,26 +64,29 @@ const AchievementsCard = ({
 }) => {
   return (
     <Card.Root
-      variant="outline"
+      variant={{ base: 'outline', _dark: 'subtle' }}
       size="sm"
       width="100%"
+      borderColor={{ base: 'gray.focusRing', _dark: 'blue.fg' }}
       backgroundColor="#00000000"
       fontFamily="Hack, monospace"
     >
       <Card.Header pb="0">
-        <Heading fontSize="18px" fontFamily="Hack, monospace">
+        <Heading fontSize="16px" fontFamily="Hack, monospace">
           {url ? (
-            <Link href={url} target="_blank">
+            <Link href={url} color="fg" target="_blank">
               {title}
             </Link>
           ) : (
-            <>{title}</>
+            <Text color="fg">{title}</Text>
           )}
         </Heading>
-        <Text fontSize="16px">{children}</Text>
+        <Text color="gray" fontSize="14px">
+          {children}
+        </Text>
       </Card.Header>
       <Card.Body>
-        <Text color="gray" fontStyle="italic" fontSize="16px">
+        <Text color="gray" fontStyle="italic" fontSize="14px">
           {booktitle}
         </Text>
       </Card.Body>
@@ -165,7 +168,7 @@ const PubSection = ({
         <PubItem items={reviewed} name="Peer Reviewed Conferences" />
         <PubItem items={peerposter} name="Peer Reviewed Posters" />
         <PubItem items={tecrep} name="Technichal Reports" />
-        <PubItem items={thesis} name="Thesis" />
+        <PubItem items={thesis} name="Dissertation / Thesis" />
       </Accordion.Root>
     </>
   )
@@ -197,7 +200,7 @@ const Home: NextPage = async () => {
                 maxWidth="200px"
                 display="inline-block"
                 borderRadius="full"
-                src="/images/face_icon_web.webp"
+                src="/images/avatar.webp"
                 alt="Profile"
               />
             </Box>
@@ -213,12 +216,18 @@ const Home: NextPage = async () => {
                 University
               </Text>
               <Text fontSize="18px">Research Associate / Ph.D Student</Text>
-              <Box mt={2} alignItems="center" display="flex" overflow="auto">
+              <Box
+                mt={2}
+                py={2}
+                alignItems="center"
+                display="flex"
+                overflow="auto"
+              >
                 <Link href="https://twitter.com/rv64gc" target="_blank">
                   <IconButton
                     aria-label="twitter"
                     variant="ghost"
-                    colorPalette="cyan"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
                     mx={2}
                     fontSize="18px"
                   >
@@ -229,7 +238,7 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="bluesky"
                     variant="ghost"
-                    colorPalette="cyan"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
                     mx={2}
                     fontSize="18px"
                   >
@@ -240,7 +249,7 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="github"
                     variant="ghost"
-                    colorPalette="cyan"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
                     mx={2}
                     fontSize="18px"
                   >
@@ -251,7 +260,7 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="vimeo"
                     variant="ghost"
-                    colorPalette="cyan"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
                     mx={2}
                     fontSize="18px"
                   >
@@ -262,7 +271,7 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="instagram"
                     variant="ghost"
-                    colorPalette="cyan"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
                     mx={2}
                     fontSize="18px"
                   >
@@ -276,7 +285,7 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="facebook"
                     variant="ghost"
-                    colorPalette="cyan"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
                     mx={2}
                     fontSize="18px"
                   >
@@ -290,7 +299,7 @@ const Home: NextPage = async () => {
                   <IconButton
                     aria-label="Linkedin"
                     variant="ghost"
-                    colorPalette="cyan"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
                     mx={2}
                     fontSize="18px"
                   >
@@ -302,7 +311,7 @@ const Home: NextPage = async () => {
                     <IconButton
                       aria-label="Mail"
                       variant="ghost"
-                      colorPalette="cyan"
+                      colorPalette={{ base: 'cyan', _dark: 'blue' }}
                       mx={2}
                       fontSize="18px"
                     >
@@ -336,11 +345,18 @@ const Home: NextPage = async () => {
                 <Link
                   href="https://researchmap.jp/akihirosk"
                   target="_blank"
-                  colorPalette="cyan"
-                  mx={2}
+                  colorPalette={{ base: 'cyan', _dark: 'blue' }}
                 >
-                  researchmap
-                  <LuExternalLink />
+                  <IconButton
+                    aria-label="researchmap"
+                    variant="ghost"
+                    colorPalette={{ base: 'cyan', _dark: 'blue' }}
+                    mx={2}
+                    px={2}
+                    fontSize="18px"
+                  >
+                    <FaMagnifyingGlass /> researchmap
+                  </IconButton>
                 </Link>
               </Box>
             </Box>
@@ -610,12 +626,12 @@ const Home: NextPage = async () => {
             >
               <Button
                 aria-label="twitter"
-                variant="surface"
-                colorPalette="cyan"
+                variant="ghost"
+                colorPalette={{ base: 'cyan', _dark: 'blue' }}
                 mb={4}
                 fontSize="18px"
               >
-                <FaKey /> keys.openpgp.org
+                <FaKey /> Public Key
               </Button>
             </Link>
             <br />

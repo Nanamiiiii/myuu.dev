@@ -12,19 +12,15 @@ export const Provider = ({ children }: { children: React.ReactNode }) => {
   const routerPath = usePathname() || ''
   return (
     <>
-      <ColorModeProvider
-        forcedTheme="light"
-        defaultTheme="light"
-        enableSystem={false}
-      >
-        <ChakraProvider value={system}>
+      <ChakraProvider value={system}>
+        <ColorModeProvider enableSystem={true}>
           <Main router={routerPath}>
             <AnimatePresence mode="wait" initial={true}>
               {children}
             </AnimatePresence>
           </Main>
-        </ChakraProvider>
-      </ColorModeProvider>
+        </ColorModeProvider>
+      </ChakraProvider>
       <SpeedInsights />
       <Analytics />
     </>

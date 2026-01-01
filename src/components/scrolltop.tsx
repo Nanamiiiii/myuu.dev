@@ -33,15 +33,15 @@ export const ScrollToTop: FC = () => {
       right={6}
       bottom={6}
       as={RiArrowUpSLine}
-      bgColor="blue.100"
-      color="blue.400"
+      bgColor={{ base: 'blue.muted', _dark: 'blue.emphasized' }}
+      color={{ base: 'blue.solid', _dark: 'blue.fg' }}
       w={10}
       h={10}
       rounded="full"
       p={2}
       boxShadow="md"
       _hover={{
-        bgColor: 'blue.200',
+        bgColor: { base: 'blue.emphasized', _dark: 'blue.solid' },
       }}
     />
   )
