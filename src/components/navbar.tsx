@@ -8,14 +8,18 @@ import {
   Flex,
   Menu,
   IconButton,
+  ClientOnly,
+  Skeleton,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import { MdGradient } from 'react-icons/md'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import Logo from './logo'
+import { useColorMode } from './ui/color-mode'
 
 const LinkItem = ({ href, children }: { href: string; children: any }) => {
   return (
-    <Link p={2} color="#202023" asChild>
+    <Link p={2} color={{ base: '#202023', _dark: '#f6f6f6' }} asChild>
       <NextLink href={href} passHref>
         {children}
       </NextLink>
@@ -25,19 +29,25 @@ const LinkItem = ({ href, children }: { href: string; children: any }) => {
 
 const LinkItemExt = ({ href, children }: { href: string; children: any }) => {
   return (
-    <Link href={href} p={2} color="#202023" target="_blank">
+    <Link
+      href={href}
+      p={2}
+      color={{ base: '#202023', _dark: '#f6f6f6' }}
+      target="_blank"
+    >
       {children}
     </Link>
   )
 }
 
 export const Navbar = (props: any) => {
+  const { toggleColorMode } = useColorMode()
   return (
     <Box
       position="fixed"
       as="nav"
       w="100%"
-      bg="#f0f8fc40"
+      bg={{ base: '#f0f8fc40', _dark: '#1a1e2840' }}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
       {...props}
@@ -72,6 +82,22 @@ export const Navbar = (props: any) => {
         </Stack>
 
         <Box display="flex" flex={1} alignItems="center" justifyContent="right">
+          <ClientOnly fallback={<Skeleton boxSize="8" />}>
+            <IconButton
+              onClick={toggleColorMode}
+              variant="ghost"
+              aria-label="Toggle color mode"
+              size="sm"
+              css={{
+                _icon: {
+                  width: '5',
+                  height: '5',
+                },
+              }}
+            >
+              <MdGradient />
+            </IconButton>
+          </ClientOnly>
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu.Root>
               <Menu.Trigger asChild>
