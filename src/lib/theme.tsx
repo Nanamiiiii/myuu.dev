@@ -1,5 +1,5 @@
 import { createSystem, defaultConfig, defineRecipe } from '@chakra-ui/react'
-import { Josefin_Sans, Source_Sans_3 } from 'next/font/google'
+import { Josefin_Sans, Source_Sans_3, IBM_Plex_Mono } from 'next/font/google'
 
 const JosefinSansRegular = Josefin_Sans({
   subsets: ['latin'],
@@ -7,6 +7,11 @@ const JosefinSansRegular = Josefin_Sans({
 })
 
 const SourceSansProRegular = Source_Sans_3({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '600', '700'],
+})
+
+const IBMPlexMonoRegular = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['200', '300', '400', '600', '700'],
 })
@@ -38,7 +43,7 @@ const LinkRecipe = defineRecipe({
 const fonts = {
   heading: { value: `${JosefinSansRegular.style.fontFamily}, sans-serif` },
   body: { value: `${SourceSansProRegular.style.fontFamily}, sans-serif` },
-  mono: { value: 'Hack, monospace' },
+  mono: { value: `${IBMPlexMonoRegular.style.fontFamily}, monospace` },
 }
 
 const colors = {

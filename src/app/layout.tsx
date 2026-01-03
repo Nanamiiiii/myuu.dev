@@ -23,9 +23,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/uhz5aqh.css" />
-      </head>
       <body>
         <Provider>{children}</Provider>
       </body>
