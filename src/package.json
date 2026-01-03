@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "npm run lint --fix",
-    "format": "prettier --write \"./**/*.{js,mjs,jsx,ts,tsx}\""
+    "format": "prettier --write \"./**/*.{js,mjs,jsx,ts,tsx}\"",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@babel/core": "^7.28.5",
@@ -21,9 +24,8 @@
     "@iconify/icons-logos": "^1.2.36",
     "@iconify/react": "^5.2.1",
     "@jsdevtools/rehype-toc": "^3.0.2",
+    "@opennextjs/cloudflare": "^1.14.7",
     "@plaiceholder/next": "^3.0.0",
-    "@vercel/analytics": "^1.6.1",
-    "@vercel/speed-insights": "^1.3.1",
     "dayjs": "^1.11.19",
     "framer-motion": "^12.23.26",
     "fs": "0.0.1-security",
@@ -59,6 +61,7 @@
     "jiti": "^2.6.1",
     "prettier": "^3.7.4",
     "typescript": "5.9.3",
-    "typescript-eslint": "^8.51.0"
+    "typescript-eslint": "^8.51.0",
+    "wrangler": "^4.54.0"
   }
 }

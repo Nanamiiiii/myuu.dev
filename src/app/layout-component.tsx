@@ -1,7 +1,5 @@
 'use client'
 import { ChakraProvider } from '@chakra-ui/react'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Main from '../components/layouts/main'
@@ -21,8 +19,6 @@ export const Provider = ({ children }: { children: React.ReactNode }) => {
           </Main>
         </ColorModeProvider>
       </ChakraProvider>
-      <SpeedInsights />
-      <Analytics />
     </>
   )
 }
