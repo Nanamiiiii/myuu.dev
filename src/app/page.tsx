@@ -2,7 +2,6 @@ import {
   Container,
   Box,
   Heading,
-  Image,
   Link,
   Text,
   IconButton,
@@ -27,11 +26,13 @@ import {
   SiLinkedin,
   SiBluesky,
 } from 'react-icons/si'
+import { ChakraNextImage } from '../components/chakra-next-image'
 import { CustomHeading } from '../components/heading'
 import { ItemizeName, ItemizeSection } from '../components/itemize'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
+import avatarImage from '../public/images/avatar.webp'
 import { peerposterPub, Publication, tecrepPub } from './pubinfo'
 import { reviewedPub, journalPub, thesisPub } from './pubinfo'
 
@@ -193,15 +194,16 @@ const Home: NextPage = async () => {
               justifyContent="center"
               alignItems="center"
             >
-              <Image
+              <ChakraNextImage
                 borderColor="gray"
                 borderWidth={4}
                 borderStyle="solid"
                 maxWidth="200px"
                 display="inline-block"
                 borderRadius="full"
-                src="/images/avatar.webp"
-                alt="Profile"
+                fetchPriority="high"
+                src={avatarImage}
+                alt="avatar"
               />
             </Box>
           </Box>
