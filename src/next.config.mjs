@@ -20,11 +20,6 @@ const nextConfig = {
         destination: 'https://notes.myuu.dev',
         permanent: true,
       },
-      {
-        source: '/blogs/:slug',
-        destination: 'https://notes.myuu.dev/:slug',
-        permanent: true,
-      },
     ]
   },
   experimental: {
