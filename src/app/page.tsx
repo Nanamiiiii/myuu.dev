@@ -12,6 +12,7 @@ import {
   List,
   Portal,
   Button,
+  CodeBlock,
 } from '@chakra-ui/react'
 import type { Metadata, NextPage, ResolvingMetadata } from 'next'
 import { FaKey } from 'react-icons/fa'
@@ -68,10 +69,10 @@ const AchievementsCard = ({
       width="100%"
       borderColor={{ base: 'gray.focusRing', _dark: 'blue.fg' }}
       backgroundColor="#00000000"
-      fontFamily="Hack, monospace"
+      fontFamily="mono"
     >
       <Card.Header pb="0">
-        <Heading fontSize="16px" fontFamily="Hack, monospace">
+        <Heading fontSize="16px" fontFamily="mono">
           {url ? (
             <Link href={url} color="fg" target="_blank">
               {title}
@@ -172,6 +173,11 @@ const PubSection = ({
     </>
   )
 }
+
+const pgpFingerprint = `
+pub ed25519 2024-10-03 [C]
+EF86 8D07 BBE9 0667 3ECC F715 E79A 0A25 75F6 6DA2
+`
 
 const Home: NextPage = async () => {
   return (
@@ -564,8 +570,7 @@ const Home: NextPage = async () => {
                 Games
                 <List.Root ps={8}>
                   <List.Item>
-                    Call of Duty, Battlefield, VALORANT, ... (FPS makes people
-                    crazy...)
+                    Call of Duty, Battlefield, ... (FPS makes people crazy...)
                   </List.Item>
                   <List.Item>
                     Resident Evil (Played almost all titles.)
@@ -598,7 +603,9 @@ const Home: NextPage = async () => {
                 <List.Root ps={8}>
                   <List.Item>
                     Coldrain, MY FIRST STORY, SECONDWALL and{' '}
-                    <span style={{ fontStyle: 'italic' }}>Dojin</span> Music
+                    <span style={{ fontStyle: 'italic' }}>
+                      Kawaii Future Bass
+                    </span>
                   </List.Item>
                 </List.Root>
               </List.Item>
@@ -635,21 +642,16 @@ const Home: NextPage = async () => {
               </Button>
             </Link>
             <br />
-            <Box
-              borderColor="gray.600"
-              borderRadius={5}
-              borderWidth={1}
-              p={2}
-              overflowX="scroll"
-            >
-              <pre>
-                <Box as="code" fontSize={16}>
-                  pub ed25519 2024-10-03 [C]
-                  <br />
-                  EF86 8D07 BBE9 0667 3ECC F715 E79A 0A25 75F6 6DA2
-                </Box>
-              </pre>
-            </Box>
+            <CodeBlock.Root code={pgpFingerprint}>
+              <CodeBlock.Header>
+                <CodeBlock.Title>Fingerprint</CodeBlock.Title>
+              </CodeBlock.Header>
+              <CodeBlock.Content>
+                <CodeBlock.Code>
+                  <CodeBlock.CodeText />
+                </CodeBlock.Code>
+              </CodeBlock.Content>
+            </CodeBlock.Root>
           </Section>
         </Container>
       </Layout>
