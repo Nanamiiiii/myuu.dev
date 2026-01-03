@@ -635,9 +635,15 @@ const Home: NextPage = async () => {
               </Button>
             </Link>
             <br />
-            <Box borderColor="gray.600" borderRadius={5} borderWidth={1} p={2}>
+            <Box
+              borderColor="gray.600"
+              borderRadius={5}
+              borderWidth={1}
+              p={2}
+              overflowX="scroll"
+            >
               <pre>
-                <Box as="code" overflowX="scroll" fontSize={16}>
+                <Box as="code" fontSize={16}>
                   pub ed25519 2024-10-03 [C]
                   <br />
                   EF86 8D07 BBE9 0667 3ECC F715 E79A 0A25 75F6 6DA2
