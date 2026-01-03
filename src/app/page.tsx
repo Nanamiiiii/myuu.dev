@@ -36,8 +36,6 @@ import avatarImage from '../public/images/avatar.webp'
 import { peerposterPub, Publication, tecrepPub } from './pubinfo'
 import { reviewedPub, journalPub, thesisPub } from './pubinfo'
 
-import 'highlight.js/styles/tokyo-night-dark.css'
-
 export const generateMetadata = async (
   props: any,
   parent: ResolvingMetadata,
@@ -637,19 +635,15 @@ const Home: NextPage = async () => {
               </Button>
             </Link>
             <br />
-            <pre>
-              <Box
-                as="code"
-                className="hljs"
-                borderRadius={10}
-                overflowX="scroll"
-                fontSize={16}
-              >
-                pub ed25519 2024-10-03 [C]
-                <br />
-                EF86 8D07 BBE9 0667 3ECC F715 E79A 0A25 75F6 6DA2
-              </Box>
-            </pre>
+            <Box borderColor="gray.600" borderRadius={5} borderWidth={1} p={2}>
+              <pre>
+                <Box as="code" overflowX="scroll" fontSize={16}>
+                  pub ed25519 2024-10-03 [C]
+                  <br />
+                  EF86 8D07 BBE9 0667 3ECC F715 E79A 0A25 75F6 6DA2
+                </Box>
+              </pre>
+            </Box>
           </Section>
         </Container>
       </Layout>
