@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Provider } from './layout-component'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://myuu.dev'),
   title: {
     default: 'Myuu.dev',
     template: '%s - Myuu.dev',
