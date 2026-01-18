@@ -179,5 +179,6 @@ export const peerposterPub: Publication[] = [
     publishedOn: 'Oct 2025',
     publishedTo:
       'The IEEE 23rd International Conference on Dependable, Autonomic and Secure Computing (DASC)',
+    url: 'https://doi.org/10.1109/DASC68382.2025.00028',
   },
 ]
