@@ -13,7 +13,7 @@ importers:
         version: 7.28.6
       '@chakra-ui/react':
         specifier: ^3.31.0
-        version: 3.31.0(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 3.31.0(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@emotion/babel-plugin':
         specifier: ^11.13.5
         version: 11.13.5
@@ -25,31 +25,31 @@ importers:
         version: 1.4.0
       '@emotion/react':
         specifier: ^11.14.0
-        version: 11.14.0(@types/react@19.2.10)(react@19.2.3)
+        version: 11.14.0(@types/react@19.2.10)(react@19.2.4)
       '@emotion/styled':
         specifier: ^11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.3))(@types/react@19.2.10)(react@19.2.3)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.4))(@types/react@19.2.10)(react@19.2.4)
       '@iconify/icons-logos':
         specifier: ^1.2.36
         version: 1.2.36
       '@iconify/react':
         specifier: ^5.2.1
-        version: 5.2.1(react@19.2.3)
+        version: 5.2.1(react@19.2.4)
       '@jsdevtools/rehype-toc':
         specifier: ^3.0.2
         version: 3.0.2
       '@opennextjs/cloudflare':
         specifier: ^1.15.1
-        version: 1.15.1(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(wrangler@4.60.0)
+        version: 1.15.1(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.60.0)
       '@plaiceholder/next':
         specifier: ^3.0.0
-        version: 3.0.0(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(plaiceholder@3.0.0(sharp@0.34.5))(sharp@0.34.5)
+        version: 3.0.0(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(plaiceholder@3.0.0(sharp@0.34.5))(sharp@0.34.5)
       dayjs:
         specifier: ^1.11.19
         version: 1.11.19
       framer-motion:
         specifier: ^12.29.2
-        version: 12.29.2(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 12.29.2(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       fs:
         specifier: 0.0.1-security
         version: 0.0.1-security
@@ -61,25 +61,25 @@ importers:
         version: 1.0.2
       next:
         specifier: ^15.5.6
-        version: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next-themes:
         specifier: ^0.4.6
-        version: 0.4.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       node-html-parser:
         specifier: ^6.1.13
         version: 6.1.13
       react:
-        specifier: 19.2.3
-        version: 19.2.3
+        specifier: 19.2.4
+        version: 19.2.4
       react-dom:
-        specifier: 19.2.3
-        version: 19.2.3(react@19.2.3)
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
       react-icons:
         specifier: ^5.5.0
-        version: 5.5.0(react@19.2.3)
+        version: 5.5.0(react@19.2.4)
       react-use:
         specifier: ^17.6.0
-        version: 17.6.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 17.6.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       server-only:
         specifier: ^0.0.1
         version: 0.0.1
@@ -3831,10 +3831,10 @@ packages:
     resolution: {integrity: sha512-K5zQjDllxWkf7Z5xJdV0/B0WTNqx6vxG70zJE4N0kBs4LovmEYWJzQGxC9bS9RAKu3bgM40lrd5zoLJ12MQ5BA==}
     engines: {node: '>= 0.10'}
 
-  react-dom@19.2.3:
-    resolution: {integrity: sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg==}
+  react-dom@19.2.4:
+    resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
     peerDependencies:
-      react: ^19.2.3
+      react: ^19.2.4
 
   react-icons@5.5.0:
     resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
@@ -3856,8 +3856,8 @@ packages:
       react: '*'
       react-dom: '*'
 
-  react@19.2.3:
-    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
+  react@19.2.4:
+    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
     engines: {node: '>=0.10.0'}
 
   reflect.getprototypeof@1.0.10:
@@ -4469,7 +4469,7 @@ packages:
 
 snapshots:
 
-  '@ark-ui/react@5.29.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@ark-ui/react@5.29.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@internationalized/date': 3.10.0
       '@zag-js/accordion': 1.29.1
@@ -4515,7 +4515,7 @@ snapshots:
       '@zag-js/qr-code': 1.29.1
       '@zag-js/radio-group': 1.29.1
       '@zag-js/rating-group': 1.29.1
-      '@zag-js/react': 1.29.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@zag-js/react': 1.29.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@zag-js/scroll-area': 1.29.1
       '@zag-js/select': 1.29.1
       '@zag-js/signature-pad': 1.29.1
@@ -4534,8 +4534,8 @@ snapshots:
       '@zag-js/tree-view': 1.29.1
       '@zag-js/types': 1.29.1
       '@zag-js/utils': 1.29.1
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@asamuzakjp/css-color@3.2.0':
     dependencies:
@@ -5732,18 +5732,18 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@chakra-ui/react@3.31.0(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@chakra-ui/react@3.31.0(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
-      '@ark-ui/react': 5.29.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@ark-ui/react': 5.29.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@emotion/is-prop-valid': 1.4.0
-      '@emotion/react': 11.14.0(@types/react@19.2.10)(react@19.2.3)
+      '@emotion/react': 11.14.0(@types/react@19.2.10)(react@19.2.4)
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.3)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.4)
       '@emotion/utils': 1.4.2
       '@pandacss/is-valid-prop': 1.4.3
       csstype: 3.2.3
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@cloudflare/kv-asset-handler@0.4.2': {}
 
@@ -5866,17 +5866,17 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.3)':
+  '@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.27.6
       '@emotion/babel-plugin': 11.13.5
       '@emotion/cache': 11.14.0
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.3)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.4)
       '@emotion/utils': 1.4.2
       '@emotion/weak-memoize': 0.4.0
       hoist-non-react-statics: 3.3.2
-      react: 19.2.3
+      react: 19.2.4
     optionalDependencies:
       '@types/react': 19.2.10
     transitivePeerDependencies:
@@ -5892,16 +5892,16 @@ snapshots:
 
   '@emotion/sheet@1.4.0': {}
 
-  '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.3))(@types/react@19.2.10)(react@19.2.3)':
+  '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.10)(react@19.2.4))(@types/react@19.2.10)(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.27.6
       '@emotion/babel-plugin': 11.13.5
       '@emotion/is-prop-valid': 1.4.0
-      '@emotion/react': 11.14.0(@types/react@19.2.10)(react@19.2.3)
+      '@emotion/react': 11.14.0(@types/react@19.2.10)(react@19.2.4)
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.3)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.4)
       '@emotion/utils': 1.4.2
-      react: 19.2.3
+      react: 19.2.4
     optionalDependencies:
       '@types/react': 19.2.10
     transitivePeerDependencies:
@@ -5909,9 +5909,9 @@ snapshots:
 
   '@emotion/unitless@0.10.0': {}
 
-  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.2.3)':
+  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.2.4)':
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
 
   '@emotion/utils@1.4.2': {}
 
@@ -6151,10 +6151,10 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/react@5.2.1(react@19.2.3)':
+  '@iconify/react@5.2.1(react@19.2.4)':
     dependencies:
       '@iconify/types': 2.0.0
-      react: 19.2.3
+      react: 19.2.4
 
   '@iconify/types@2.0.0': {}
 
@@ -6389,7 +6389,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@opennextjs/aws@3.9.12(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))':
+  '@opennextjs/aws@3.9.12(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
     dependencies:
       '@ast-grep/napi': 0.40.0
       '@aws-sdk/client-cloudfront': 3.398.0
@@ -6405,7 +6405,7 @@ snapshots:
       cookie: 1.1.1
       esbuild: 0.25.4
       express: 5.2.1
-      next: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      next: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       path-to-regexp: 6.3.0
       urlpattern-polyfill: 10.1.0
       yaml: 2.8.2
@@ -6413,15 +6413,15 @@ snapshots:
       - aws-crt
       - supports-color
 
-  '@opennextjs/cloudflare@1.15.1(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(wrangler@4.60.0)':
+  '@opennextjs/cloudflare@1.15.1(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.60.0)':
     dependencies:
       '@ast-grep/napi': 0.40.0
       '@dotenvx/dotenvx': 1.31.0
-      '@opennextjs/aws': 3.9.12(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
+      '@opennextjs/aws': 3.9.12(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       cloudflare: 4.5.0
       enquirer: 2.4.1
       glob: 12.0.0
-      next: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      next: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       ts-tqdm: 0.8.6
       wrangler: 4.60.0
       yargs: 18.0.0
@@ -6432,9 +6432,9 @@ snapshots:
 
   '@pandacss/is-valid-prop@1.4.3': {}
 
-  '@plaiceholder/next@3.0.0(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(plaiceholder@3.0.0(sharp@0.34.5))(sharp@0.34.5)':
+  '@plaiceholder/next@3.0.0(next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(plaiceholder@3.0.0(sharp@0.34.5))(sharp@0.34.5)':
     dependencies:
-      next: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      next: 15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       plaiceholder: 3.0.0(sharp@0.34.5)
       sharp: 0.34.5
 
@@ -7588,14 +7588,14 @@ snapshots:
       '@zag-js/types': 1.29.1
       '@zag-js/utils': 1.29.1
 
-  '@zag-js/react@1.29.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@zag-js/react@1.29.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@zag-js/core': 1.29.1
       '@zag-js/store': 1.29.1
       '@zag-js/types': 1.29.1
       '@zag-js/utils': 1.29.1
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@zag-js/rect-utils@1.29.1': {}
 
@@ -8713,15 +8713,15 @@ snapshots:
 
   forwarded@0.2.0: {}
 
-  framer-motion@12.29.2(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  framer-motion@12.29.2(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       motion-dom: 12.29.2
       motion-utils: 12.29.2
       tslib: 2.8.1
     optionalDependencies:
       '@emotion/is-prop-valid': 1.4.0
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   fresh@2.0.0: {}
 
@@ -9234,15 +9234,15 @@ snapshots:
 
   ms@2.1.3: {}
 
-  nano-css@5.6.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  nano-css@5.6.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
       css-tree: 1.1.3
       csstype: 3.2.3
       fastest-stable-stringify: 2.0.2
       inline-style-prefixer: 7.0.1
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
       rtl-css-js: 1.16.1
       stacktrace-js: 2.0.2
       stylis: 4.3.6
@@ -9257,20 +9257,20 @@ snapshots:
 
   net@1.0.2: {}
 
-  next-themes@0.4.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  next-themes@0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
-  next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  next@15.5.10(@babel/core@7.28.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@next/env': 15.5.10
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001766
       postcss: 8.4.31
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      styled-jsx: 5.1.6(@babel/core@7.28.6)(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      styled-jsx: 5.1.6(@babel/core@7.28.6)(react@19.2.4)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.7
       '@next/swc-darwin-x64': 15.5.7
@@ -9490,23 +9490,23 @@ snapshots:
       iconv-lite: 0.7.1
       unpipe: 1.0.0
 
-  react-dom@19.2.3(react@19.2.3):
+  react-dom@19.2.4(react@19.2.4):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
       scheduler: 0.27.0
 
-  react-icons@5.5.0(react@19.2.3):
+  react-icons@5.5.0(react@19.2.4):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
 
   react-is@16.13.1: {}
 
-  react-universal-interface@0.6.2(react@19.2.3)(tslib@2.8.1):
+  react-universal-interface@0.6.2(react@19.2.4)(tslib@2.8.1):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
       tslib: 2.8.1
 
-  react-use@17.6.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  react-use@17.6.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@types/js-cookie': 2.2.7
       '@xobotyi/scrollbar-width': 1.9.5
@@ -9514,10 +9514,10 @@ snapshots:
       fast-deep-equal: 3.1.3
       fast-shallow-equal: 1.0.0
       js-cookie: 2.2.1
-      nano-css: 5.6.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      react-universal-interface: 0.6.2(react@19.2.3)(tslib@2.8.1)
+      nano-css: 5.6.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      react-universal-interface: 0.6.2(react@19.2.4)(tslib@2.8.1)
       resize-observer-polyfill: 1.5.1
       screenfull: 5.2.0
       set-harmonic-interval: 1.0.1
@@ -9525,7 +9525,7 @@ snapshots:
       ts-easing: 0.2.0
       tslib: 2.8.1
 
-  react@19.2.3: {}
+  react@19.2.4: {}
 
   reflect.getprototypeof@1.0.10:
     dependencies:
@@ -9867,10 +9867,10 @@ snapshots:
 
   strnum@2.1.2: {}
 
-  styled-jsx@5.1.6(@babel/core@7.28.6)(react@19.2.3):
+  styled-jsx@5.1.6(@babel/core@7.28.6)(react@19.2.4):
     dependencies:
       client-only: 0.0.1
-      react: 19.2.3
+      react: 19.2.4
     optionalDependencies:
       '@babel/core': 7.28.6
 
