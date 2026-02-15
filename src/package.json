@@ -61,6 +61,6 @@
     "prettier": "^3.8.1",
     "typescript": "5.9.3",
     "typescript-eslint": "^8.55.0",
-    "wrangler": "^4.63.0"
+    "wrangler": "^4.65.0"
   }
 }
