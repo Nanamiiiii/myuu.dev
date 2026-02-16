@@ -14,7 +14,7 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
-    "@babel/core": "^7.28.6",
+    "@babel/core": "^7.29.0",
     "@chakra-ui/react": "^3.31.0",
     "@emotion/babel-plugin": "^11.13.5",
     "@emotion/css": "^11.13.5",
