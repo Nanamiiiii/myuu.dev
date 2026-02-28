@@ -24,7 +24,7 @@
     "@iconify/icons-logos": "^1.2.36",
     "@iconify/react": "^5.2.1",
     "@jsdevtools/rehype-toc": "^3.0.2",
-    "@opennextjs/cloudflare": "^1.16.5",
+    "@opennextjs/cloudflare": "^1.17.1",
     "@plaiceholder/next": "^3.0.0",
     "dayjs": "^1.11.19",
     "framer-motion": "^12.34.3",
