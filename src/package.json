@@ -26,7 +26,7 @@
     "@jsdevtools/rehype-toc": "^3.0.2",
     "@opennextjs/cloudflare": "^1.17.1",
     "@plaiceholder/next": "^3.0.0",
-    "dayjs": "^1.11.19",
+    "dayjs": "^1.11.20",
     "framer-motion": "^12.34.5",
     "fs": "0.0.1-security",
     "jsdom": "^26.1.0",
