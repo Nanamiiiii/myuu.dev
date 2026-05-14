@@ -39,8 +39,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       '@opennextjs/cloudflare':
-        specifier: ^1.19.9
-        version: 1.19.9(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.87.0)
+        specifier: ^1.19.10
+        version: 1.19.10(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.87.0)
       '@plaiceholder/next':
         specifier: ^3.0.0
         version: 3.0.0(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(plaiceholder@3.0.0(sharp@0.34.5))(sharp@0.34.5)
@@ -1390,8 +1390,8 @@ packages:
     peerDependencies:
       next: '>=15.5.18 <16 || >=16.2.6'
 
-  '@opennextjs/cloudflare@1.19.9':
-    resolution: {integrity: sha512-GUs+X25VFUqulzA0fALvUABWZ08zR1cpAPpREcNxhzVdhERe2OU3NslU25GsecV+0askV/w/NmE9PgpzENaAIg==}
+  '@opennextjs/cloudflare@1.19.10':
+    resolution: {integrity: sha512-rTVugmBI2q9PCc/XV7qQlCNFL1cCfhLvaOeyPu/TU8z4K1VcsDMVHDlABYeRB2kGmH7RnFNFeQAK+1YdQWk7tA==}
     hasBin: true
     peerDependencies:
       next: '>=15.5.18 <16 || >=16.2.6'
@@ -5976,7 +5976,7 @@ snapshots:
       - aws-crt
       - supports-color
 
-  '@opennextjs/cloudflare@1.19.9(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.87.0)':
+  '@opennextjs/cloudflare@1.19.10(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.87.0)':
     dependencies:
       '@ast-grep/napi': 0.40.5
       '@dotenvx/dotenvx': 1.31.0
