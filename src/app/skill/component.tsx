@@ -18,22 +18,24 @@ import {
   SiKubernetes,
   SiDocker,
   SiQemu,
-  SiAmazonwebservices,
   SiVmware,
   SiGooglecloud,
   SiLua,
   SiNixos,
   SiRiscv,
   SiFsharp,
-  SiAdobeaftereffects,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
-  SiAdobeillustrator,
 } from 'react-icons/si'
-import { TbBrandCSharp } from 'react-icons/tb'
+import {
+  TbBrandAdobeAfterEffect,
+  TbBrandAdobeIllustrator,
+  TbBrandAdobePhotoshop,
+  TbBrandAdobePremier,
+  TbBrandCSharp,
+} from 'react-icons/tb'
 import { VscAzure } from 'react-icons/vsc'
 import { CustomHeading } from '../../components/heading'
 import { ItemizeName, ItemizeSection } from '../../components/itemize'
+import { FaAws } from 'react-icons/fa6'
 
 export const Component = () => {
   return (
@@ -266,7 +268,7 @@ export const Component = () => {
       <Box display="flex" py={2} pl={4} overflow="auto">
         <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiAmazonwebservices />
+            <FaAws />
           </Tag.StartElement>
           <Tag.Label>AWS</Tag.Label>
         </Tag.Root>
@@ -296,25 +298,25 @@ export const Component = () => {
       <Box display="flex" py={2} pl={4} mb={6} overflow="auto">
         <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiAdobeaftereffects />
+            <TbBrandAdobeAfterEffect />
           </Tag.StartElement>
           <Tag.Label>Adobe After Effects</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiAdobepremierepro />
+            <TbBrandAdobePremier />
           </Tag.StartElement>
           <Tag.Label>Adobe Premier Pro</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiAdobephotoshop />
+            <TbBrandAdobePhotoshop />
           </Tag.StartElement>
           <Tag.Label>Adobe Photoshop</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="orange" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <SiAdobeillustrator />
+            <TbBrandAdobeIllustrator />
           </Tag.StartElement>
           <Tag.Label>Adobe Illustrator</Tag.Label>
         </Tag.Root>

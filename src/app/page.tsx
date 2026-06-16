@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import type { Metadata, NextPage, ResolvingMetadata } from 'next'
 import { FaKey } from 'react-icons/fa'
-import { FaMagnifyingGlass } from 'react-icons/fa6'
+import { FaLinkedin, FaMagnifyingGlass } from 'react-icons/fa6'
 import { IoMdMail } from 'react-icons/io'
 import {
   SiX,
@@ -24,7 +24,6 @@ import {
   SiInstagram,
   SiFacebook,
   SiVimeo,
-  SiLinkedin,
   SiBluesky,
 } from 'react-icons/si'
 import { ChakraNextImage } from '../components/chakra-next-image'
@@ -309,7 +308,7 @@ const Home: NextPage = async () => {
                     mx={2}
                     fontSize="18px"
                   >
-                    <SiLinkedin />
+                    <FaLinkedin />
                   </IconButton>
                 </Link>
                 <Popover.Root>
