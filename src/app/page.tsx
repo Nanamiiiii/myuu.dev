@@ -163,7 +163,7 @@ const PubSection = ({
         Publications
       </CustomHeading>
       <Accordion.Root multiple>
-        <PubItem items={journal} name="Journals" />
+        <PubItem items={journal} name="Journal Articles" />
         <PubItem items={reviewed} name="Peer Reviewed Conferences" />
         <PubItem items={peerposter} name="Peer Reviewed Posters" />
         <PubItem items={tecrep} name="Technichal Reports" />
