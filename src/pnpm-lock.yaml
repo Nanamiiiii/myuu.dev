@@ -66,8 +66,8 @@ importers:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       node-html-parser:
-        specifier: ^8.0.2
-        version: 8.0.2
+        specifier: ^8.0.3
+        version: 8.0.3
       react:
         specifier: 19.2.7
         version: 19.2.7
@@ -3576,8 +3576,8 @@ packages:
       encoding:
         optional: true
 
-  node-html-parser@8.0.2:
-    resolution: {integrity: sha512-fhG4Ne6moYy00jI3SkBEJzEa/pMX/RLLxnvlvu8x0OvsiegHdw5Q8brbe+AhZHqHFi2PZnSYObQ/x+cQXuNg0Q==}
+  node-html-parser@8.0.3:
+    resolution: {integrity: sha512-ilV20e83nDfiFoEyhlvgqks23Hmy6pySF6UNb8DpgmxnTbXDGgShYKzH2+7ctJK42LXyo+IFOgxCkXmmbacm8w==}
 
   node-releases@2.0.48:
     resolution: {integrity: sha512-1uz8041X6LoI6ZSdZacM9lVY28vuzDlSKitnpbSNK0RfKoIJkX29NBPVEFXhnuSuEOA9Ww0xnPJ+ILWbGAv8DA==}
@@ -8627,7 +8627,7 @@ snapshots:
     dependencies:
       whatwg-url: 5.0.0
 
-  node-html-parser@8.0.2:
+  node-html-parser@8.0.3:
     dependencies:
       css-select: 5.2.2
       entities: 8.0.0
