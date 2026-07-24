@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@babel/core": "^8.0.1",
-    "@chakra-ui/react": "^3.36.0",
+    "@chakra-ui/react": "^3.36.1",
     "@emotion/babel-plugin": "^11.13.5",
     "@emotion/css": "^11.13.5",
     "@emotion/is-prop-valid": "^1.4.0",
