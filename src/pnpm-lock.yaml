@@ -43,7 +43,7 @@ importers:
         version: 1.19.11(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(supports-color@10.2.2)(wrangler@4.103.0)
       '@plaiceholder/next':
         specifier: ^3.0.0
-        version: 3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.0.1)))(sharp@0.35.3(@types/node@26.0.1))
+        version: 3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.1.2)))(sharp@0.35.3(@types/node@26.1.2))
       dayjs:
         specifier: ^1.11.21
         version: 1.11.21
@@ -85,7 +85,7 @@ importers:
         version: 0.0.1
       sharp:
         specifier: 0.35.3
-        version: 0.35.3(@types/node@26.0.1)
+        version: 0.35.3(@types/node@26.1.2)
       tls:
         specifier: ^0.0.1
         version: 0.0.1
@@ -109,8 +109,8 @@ importers:
         specifier: ^28.0.3
         version: 28.0.3
       '@types/node':
-        specifier: 26.0.1
-        version: 26.0.1
+        specifier: 26.1.2
+        version: 26.1.2
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -1812,8 +1812,8 @@ packages:
   '@types/node@18.19.130':
     resolution: {integrity: sha512-GRaXQx6jGfL8sKfaIDD6OupbIHBr9jv7Jnaml9tB7l4v068PAOXqfcujMMo5PhbIs6ggR1XODELqahT2R8v0fg==}
 
-  '@types/node@26.0.1':
-    resolution: {integrity: sha512-fc3KiUoBt6kie0N9bIW3E47vZsuaMf0PM2AaUpLCLT0s/LvX1nxAim6Fc049cNxODPpGm6qRAuUOB86SkRuPQw==}
+  '@types/node@26.1.2':
+    resolution: {integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -6077,11 +6077,11 @@ snapshots:
 
   '@pandacss/is-valid-prop@1.11.3': {}
 
-  '@plaiceholder/next@3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.0.1)))(sharp@0.35.3(@types/node@26.0.1))':
+  '@plaiceholder/next@3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.1.2)))(sharp@0.35.3(@types/node@26.1.2))':
     dependencies:
       next: 16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      plaiceholder: 3.0.0(sharp@0.35.3(@types/node@26.0.1))
-      sharp: 0.35.3(@types/node@26.0.1)
+      plaiceholder: 3.0.0(sharp@0.35.3(@types/node@26.1.2))
+      sharp: 0.35.3(@types/node@26.1.2)
 
   '@poppinss/colors@4.1.6':
     dependencies:
@@ -6320,7 +6320,7 @@ snapshots:
 
   '@types/jsdom@28.0.3':
     dependencies:
-      '@types/node': 26.0.1
+      '@types/node': 26.1.2
       '@types/tough-cookie': 4.0.5
       parse5: 8.0.1
       undici-types: 7.28.0
@@ -6333,14 +6333,14 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 26.0.1
+      '@types/node': 26.1.2
       form-data: 4.0.6
 
   '@types/node@18.19.130':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@26.0.1':
+  '@types/node@26.1.2':
     dependencies:
       undici-types: 8.3.0
 
@@ -8806,9 +8806,9 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.0.1)):
+  plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.1.2)):
     dependencies:
-      sharp: 0.35.3(@types/node@26.0.1)
+      sharp: 0.35.3(@types/node@26.1.2)
 
   possible-typed-array-names@1.1.0: {}
 
@@ -9074,7 +9074,7 @@ snapshots:
       '@img/sharp-win32-ia32': 0.34.5
       '@img/sharp-win32-x64': 0.34.5
 
-  sharp@0.35.3(@types/node@26.0.1):
+  sharp@0.35.3(@types/node@26.1.2):
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
@@ -9105,7 +9105,7 @@ snapshots:
       '@img/sharp-win32-arm64': 0.35.3
       '@img/sharp-win32-ia32': 0.35.3
       '@img/sharp-win32-x64': 0.35.3
-      '@types/node': 26.0.1
+      '@types/node': 26.1.2
 
   shebang-command@2.0.0:
     dependencies:
