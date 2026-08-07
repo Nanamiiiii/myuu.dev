@@ -207,6 +207,7 @@ const Home: NextPage = async () => {
                 fetchPriority="high"
                 src={avatarImage}
                 alt="avatar"
+                loading="eager"
               />
             </Box>
           </Box>
