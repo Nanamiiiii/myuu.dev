@@ -3,3 +3,4 @@
 .vscode
 .pnpm-store
 .direnv
+.pre-commit-config.yaml
