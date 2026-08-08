@@ -43,7 +43,7 @@ importers:
         version: 1.20.2(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(supports-color@10.2.2)(wrangler@4.118.0)
       '@plaiceholder/next':
         specifier: ^3.0.0
-        version: 3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.1.2)))(sharp@0.35.3(@types/node@26.1.2))
+        version: 3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.2.0)))(sharp@0.35.3(@types/node@26.2.0))
       dayjs:
         specifier: ^1.11.21
         version: 1.11.21
@@ -85,7 +85,7 @@ importers:
         version: 0.0.1
       sharp:
         specifier: 0.35.3
-        version: 0.35.3(@types/node@26.1.2)
+        version: 0.35.3(@types/node@26.2.0)
       tls:
         specifier: ^0.0.1
         version: 0.0.1
@@ -112,8 +112,8 @@ importers:
         specifier: ^28.0.3
         version: 28.0.3
       '@types/node':
-        specifier: 26.1.2
-        version: 26.1.2
+        specifier: 26.2.0
+        version: 26.2.0
       '@types/react':
         specifier: 19.2.18
         version: 19.2.18
@@ -1979,6 +1979,9 @@ packages:
 
   '@types/node@26.1.2':
     resolution: {integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==}
+
+  '@types/node@26.2.0':
+    resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -6352,11 +6355,11 @@ snapshots:
 
   '@pandacss/is-valid-prop@1.11.3': {}
 
-  '@plaiceholder/next@3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.1.2)))(sharp@0.35.3(@types/node@26.1.2))':
+  '@plaiceholder/next@3.0.0(next@16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.2.0)))(sharp@0.35.3(@types/node@26.2.0))':
     dependencies:
       next: 16.2.11(@babel/core@8.0.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      plaiceholder: 3.0.0(sharp@0.35.3(@types/node@26.1.2))
-      sharp: 0.35.3(@types/node@26.1.2)
+      plaiceholder: 3.0.0(sharp@0.35.3(@types/node@26.2.0))
+      sharp: 0.35.3(@types/node@26.2.0)
 
   '@poppinss/colors@4.1.6':
     dependencies:
@@ -6616,6 +6619,10 @@ snapshots:
       undici-types: 5.26.5
 
   '@types/node@26.1.2':
+    dependencies:
+      undici-types: 8.3.0
+
+  '@types/node@26.2.0':
     dependencies:
       undici-types: 8.3.0
 
@@ -9081,9 +9088,9 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.1.2)):
+  plaiceholder@3.0.0(sharp@0.35.3(@types/node@26.2.0)):
     dependencies:
-      sharp: 0.35.3(@types/node@26.1.2)
+      sharp: 0.35.3(@types/node@26.2.0)
 
   possible-typed-array-names@1.1.0: {}
 
@@ -9382,7 +9389,7 @@ snapshots:
       '@img/sharp-win32-ia32': 0.35.2
       '@img/sharp-win32-x64': 0.35.2
 
-  sharp@0.35.3(@types/node@26.1.2):
+  sharp@0.35.3(@types/node@26.2.0):
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
@@ -9413,7 +9420,7 @@ snapshots:
       '@img/sharp-win32-arm64': 0.35.3
       '@img/sharp-win32-ia32': 0.35.3
       '@img/sharp-win32-x64': 0.35.3
-      '@types/node': 26.1.2
+      '@types/node': 26.2.0
 
   shebang-command@2.0.0:
     dependencies:
