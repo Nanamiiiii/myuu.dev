@@ -1,8 +1,6 @@
 import 'server-only'
 
-import { readFileSync } from 'node:fs'
-import path from 'node:path'
-import { parse } from 'yaml'
+import publicationData from './publications.yaml'
 
 type Author = {
   name: string
@@ -29,10 +27,7 @@ type YamlPublication = Omit<Publication, 'author'> & {
   author: string[]
 }
 
-const publicationsPath = path.join(process.cwd(), 'app', 'publications.yaml')
-const publications = parse(
-  readFileSync(publicationsPath, 'utf8'),
-) as PublicationData
+const publications = publicationData as PublicationData
 
 const myNames = new Set(['Akihiro Saiki', '齊木昭大'])
 const withAuthorMetadata = (publication: YamlPublication): Publication => ({

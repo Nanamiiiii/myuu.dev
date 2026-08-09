@@ -9,3 +9,8 @@ declare module 'next/config' {
 
   export default getConfig
 }
+
+declare module '*.yaml' {
+  const content: unknown
+  export default content
+}
