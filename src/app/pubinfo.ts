@@ -29,7 +29,7 @@ type YamlPublication = Omit<Publication, 'author'> & {
 
 const publications = publicationData as PublicationData
 
-const myNames = new Set(['Akihiro Saiki', '齊木昭大'])
+const myNames = new Set(['Akihiro Saiki', '齊木昭大', '齊木 昭大'])
 const withAuthorMetadata = (publication: YamlPublication): Publication => ({
   ...publication,
   author: publication.author.map(name => ({
