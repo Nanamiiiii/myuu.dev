@@ -29,7 +29,7 @@ import {
   TbBrandAdobeAfterEffect,
   TbBrandAdobeIllustrator,
   TbBrandAdobePhotoshop,
-  TbBrandAdobePremier,
+  TbBrandAdobePremiere,
   TbBrandCSharp,
 } from 'react-icons/tb'
 import { VscAzure } from 'react-icons/vsc'
