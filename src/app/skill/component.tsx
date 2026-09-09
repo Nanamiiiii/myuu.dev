@@ -29,7 +29,7 @@ import {
   TbBrandAdobeAfterEffect,
   TbBrandAdobeIllustrator,
   TbBrandAdobePhotoshop,
-  TbBrandAdobePremier,
+  TbBrandAdobePremiere,
   TbBrandCSharp,
 } from 'react-icons/tb'
 import { VscAzure } from 'react-icons/vsc'
@@ -304,9 +304,9 @@ export const Component = () => {
         </Tag.Root>
         <Tag.Root colorPalette="purple" mx={2} flexShrink="0">
           <Tag.StartElement>
-            <TbBrandAdobePremier />
+            <TbBrandAdobePremiere />
           </Tag.StartElement>
-          <Tag.Label>Adobe Premier Pro</Tag.Label>
+          <Tag.Label>Adobe Premiere Pro</Tag.Label>
         </Tag.Root>
         <Tag.Root colorPalette="blue" mx={2} flexShrink="0">
           <Tag.StartElement>
