@@ -43,7 +43,7 @@
     "tls": "^0.0.1",
     "ts-pattern": "^5.9.0",
     "unified": "^11.0.5",
-    "yaml": "^2.9.0"
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.7",
