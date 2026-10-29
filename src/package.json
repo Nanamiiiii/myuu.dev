@@ -62,7 +62,7 @@
     "prettier": "^3.9.10",
     "typescript": "7.0.2",
     "typescript-eslint": "^8.72.1",
-    "wrangler": "^4.123.0",
+    "wrangler": "^4.156.0",
     "yaml-loader": "^0.9.0"
   }
 }
